@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ui',['ui',['../classAdminScreen.html#af391e83bd7c335fc7bfa49333421a263',1,'AdminScreen']]],
+  ['ui',['ui',['../classAdminScreen.html#af391e83bd7c335fc7bfa49333421a263',1,'AdminScreen::ui()'],['../classExUserScreen.html#abed6a95638d506058d3b1e6e69a42788',1,'ExUserScreen::ui()'],['../classGoodsMgmtScreen.html#ac3a8443017075cfa943106952464f494',1,'GoodsMgmtScreen::ui()']]],
   ['ui_5fadminscreen',['Ui_AdminScreen',['../classUi__AdminScreen.html',1,'']]],
   ['ui_5fexuserscreen',['Ui_ExUserScreen',['../classUi__ExUserScreen.html',1,'']]],
   ['ui_5fgoodsmgmtscreen',['Ui_GoodsMgmtScreen',['../classUi__GoodsMgmtScreen.html',1,'']]],
