@@ -1,0 +1,82 @@
+\hypertarget{auth_8h}{\section{Файл Recognitor/auth.h}
+\label{auth_8h}\index{Recognitor/auth.\-h@{Recognitor/auth.\-h}}
+}
+
+
+Authentication header.  
+
+
+\subsection*{Переліки}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951}{Access} \{ \hyperlink{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a3228e792244f936584abc6e3d7542d2c}{A\-D\-M\-I\-N}, 
+\hyperlink{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a02570c2bd30d794ff48c3b6369fb3545}{E\-X\-U\-S\-E\-R}, 
+\hyperlink{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b}{U\-S\-E\-R}, 
+\hyperlink{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a08f1ea1cb5cac34a4f4237e5259fcabb}{D\-E\-N\-I\-E\-D}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration with types of access privileges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951}{Access} \hyperlink{auth_8h_a4d0f4bb0edb145ecb5a92671df487468}{Check} (Q\-String login, Q\-String pwd)
+\begin{DoxyCompactList}\small\item\em The authentication function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Детальний опис}
+Authentication header. \begin{DoxyAuthor}{Автор}
+mnxoid
+\end{DoxyAuthor}
+Copyright 2014 by mnxoid,
+
+This software is the confidential and proprietary information of mnxoid (\char`\"{}\-Confidential Information\char`\"{}). You shall not disclose such Confidential Information and shall use it only in accordance with the terms of the license agreement you entered into with mnxoid. 
+
+\subsection{Опис переліків}
+\hypertarget{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951}{\index{auth.\-h@{auth.\-h}!Access@{Access}}
+\index{Access@{Access}!auth.h@{auth.\-h}}
+\subsubsection[{Access}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Access}}}\label{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951}
+
+
+Enumeration with types of access privileges. 
+
+\begin{Desc}
+\item[Елементи переліків\-: ]\par
+\begin{description}
+\index{A\-D\-M\-I\-N@{A\-D\-M\-I\-N}!auth.\-h@{auth.\-h}}\index{auth.\-h@{auth.\-h}!A\-D\-M\-I\-N@{A\-D\-M\-I\-N}}\item[{\em 
+\hypertarget{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a3228e792244f936584abc6e3d7542d2c}{A\-D\-M\-I\-N}\label{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a3228e792244f936584abc6e3d7542d2c}
+}]Administrator privileges. \index{E\-X\-U\-S\-E\-R@{E\-X\-U\-S\-E\-R}!auth.\-h@{auth.\-h}}\index{auth.\-h@{auth.\-h}!E\-X\-U\-S\-E\-R@{E\-X\-U\-S\-E\-R}}\item[{\em 
+\hypertarget{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a02570c2bd30d794ff48c3b6369fb3545}{E\-X\-U\-S\-E\-R}\label{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a02570c2bd30d794ff48c3b6369fb3545}
+}]Extended user privileges. \index{U\-S\-E\-R@{U\-S\-E\-R}!auth.\-h@{auth.\-h}}\index{auth.\-h@{auth.\-h}!U\-S\-E\-R@{U\-S\-E\-R}}\item[{\em 
+\hypertarget{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b}{U\-S\-E\-R}\label{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b}
+}]Default user privileges. \index{D\-E\-N\-I\-E\-D@{D\-E\-N\-I\-E\-D}!auth.\-h@{auth.\-h}}\index{auth.\-h@{auth.\-h}!D\-E\-N\-I\-E\-D@{D\-E\-N\-I\-E\-D}}\item[{\em 
+\hypertarget{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a08f1ea1cb5cac34a4f4237e5259fcabb}{D\-E\-N\-I\-E\-D}\label{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951a08f1ea1cb5cac34a4f4237e5259fcabb}
+}]Access denied. \end{description}
+\end{Desc}
+
+
+
+\subsection{Опис функцій}
+\hypertarget{auth_8h_a4d0f4bb0edb145ecb5a92671df487468}{\index{auth.\-h@{auth.\-h}!Check@{Check}}
+\index{Check@{Check}!auth.h@{auth.\-h}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Access} Check (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{login, }
+\item[{Q\-String}]{pwd}
+\end{DoxyParamCaption}
+)}}\label{auth_8h_a4d0f4bb0edb145ecb5a92671df487468}
+
+
+The authentication function. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\tt in}  & {\em login} & -\/ User name \\
+\hline
+\mbox{\tt in}  & {\em pwd} & -\/ User password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+Access Privilege level 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Див. також}
+\hyperlink{auth_8h_a7da68dc8ab4fb9bae588bdd1f6afc951}{Access} 
+\end{DoxySeeAlso}

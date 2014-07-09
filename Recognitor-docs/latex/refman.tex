@@ -1,0 +1,115 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[ukrainian]{babel}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Recognitor }\\
+\vspace*{1cm}
+{\large Створено системою Doxygen 1.8.1.2}\\
+\vspace*{0.5cm}
+{\small Wed Jul 9 2014 10:09:26}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{Алфавітний покажчик класів}
+\input{hierarchy}
+\chapter{Алфавітний покажчик класів}
+\input{annotated}
+\chapter{Покажчик файлв}
+\input{files}
+\chapter{Класи}
+\input{classAdminScreen}
+\input{classUi_1_1AdminScreen}
+\input{structARGS}
+\input{classCameraCapture}
+\input{classExUserScreen}
+\input{classUi_1_1ExUserScreen}
+\input{classGoodsMgmtScreen}
+\input{classUi_1_1GoodsMgmtScreen}
+\input{classUi_1_1MainWindow}
+\input{classMainWindow}
+\input{classUi__AdminScreen}
+\input{classUi__ExUserScreen}
+\input{classUi__GoodsMgmtScreen}
+\input{classUi__MainWindow}
+\input{classUi__UserScreen}
+\input{classUserScreen}
+\input{classUi_1_1UserScreen}
+\input{classWindowManager}
+\chapter{Файли}
+\input{adminscreen_8cpp}
+\input{adminscreen_8h}
+\input{auth_8cpp}
+\input{auth_8h}
+\input{cameracapture_8cpp}
+\input{cameracapture_8h}
+\input{cvtoqt_8cpp}
+\input{cvtoqt_8h}
+\input{exuserscreen_8cpp}
+\input{exuserscreen_8h}
+\input{goodsmgmtscreen_8cpp}
+\input{goodsmgmtscreen_8h}
+\input{main_8cpp}
+\input{mainwindow_8cpp}
+\input{mainwindow_8h}
+\input{userscreen_8cpp}
+\input{userscreen_8h}
+\input{windowmanager_8cpp}
+\input{windowmanager_8h}
+\printindex
+\end{document}
