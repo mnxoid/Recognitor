@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Recognitor: Файл Recognitor/adminscreen.h</title>
+<title>Recognitor: Cписок елементів</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,8 +37,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульна&#160;сторінка</span></a></li>
-      <li><a href="annotated.html"><span>Класи</span></a></li>
-      <li class="current"><a href="files.html"><span>Файли</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Класи</span></a></li>
+      <li><a href="files.html"><span>Файли</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,8 +59,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>Файли</span></a></li>
-      <li><a href="globals.html"><span>Елементи&#160;файлу</span></a></li>
+      <li><a href="annotated.html"><span>Класи</span></a></li>
+      <li><a href="classes.html"><span>Алфавітний&#160;покажчик&#160;класів</span></a></li>
+      <li><a href="hierarchy.html"><span>Ієрархія&#160;класів</span></a></li>
+      <li><a href="functions.html"><span>Елементи&#160;класів</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -77,36 +79,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_2f9d1cf102a8565af2cc18331c93e4d5.html">Recognitor</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Класи</a>  </div>
   <div class="headertitle">
-<div class="title">Файл adminscreen.h</div>  </div>
+<div class="title">Packet Cписок елементів</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Administration window header.  
-<a href="#details">Детальніше...</a></p>
-<div class="textblock"><code>#include &lt;QMainWindow&gt;</code><br/>
-</div>
-<p><a href="adminscreen_8h_source.html">Див. вихідні тексти.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
-Класи</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminScreen.html">AdminScreen</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Administrator window class.  <a href="classAdminScreen.html#details">Детальніше...</a><br/></td></tr>
-</table>
-<a name="details" id="details"></a><h2>Детальний опис</h2>
-<div class="textblock"><p>Administration window header. </p>
-<dl class="section author"><dt>Автор</dt><dd>mnxoid</dd></dl>
-<p>Copyright 2014 by mnxoid,</p>
-<p>This software is the confidential and proprietary information of mnxoid ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in accordance with the terms of the license agreement you entered into with mnxoid. </p>
-</div></div><!-- contents -->
+<p>Повний список елементів<a class="el" href="classPacket.html">Packet</a>, включаючи всі успадковані елементи</p>
+<table class="directory">
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>DATA</b> (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getBytes</b>() (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>Packet</b>() (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Packet</b>(Packet &amp;p) (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>Packet</b>(RQTYPE REQUEST_ID, int SESSION_ID, int SIZE, char *DATA) (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>REQUEST_ID</b> (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>send</b>(QString IP, int port) (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>SESSION_ID</b> (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>SIZE</b> (визначено в <a class="el" href="classPacket.html">Packet</a>)</td><td class="entry"><a class="el" href="classPacket.html">Packet</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Документація до Recognitor створена Fri Jul 11 2014 01:16:22 системою &#160;<a href="http://www.doxygen.org/index.html">

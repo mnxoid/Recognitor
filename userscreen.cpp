@@ -17,26 +17,40 @@
 #include "windowmanager.h"
 #include <opencv2/highgui/highgui.hpp>
 #include "cvtoqt.h"
+/**
+ * @brief       Window Manager instance
+ * @see         main.cpp
+ **/
 extern WindowManager WMgr;
+/**
+ * @brief       UserScreen constructor
+ * @param       [in]    parent - Window parent
+ **/
 UserScreen::UserScreen(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::UserScreen)
 {
     ui->setupUi(this);
 }
-
+/**
+ * @brief       UserScreen destructor
+ **/
 UserScreen::~UserScreen()
 {
     delete ui;
 }
-
+/**
+ * @brief       Exit button click handler
+ **/
 void UserScreen::on_pushButton_2_clicked()
 {
     WMgr.mw->show();//Also consider checking whether scan session is active
     WMgr.us->hide();//Maybe just disable this button
 }
 
-
+/**
+ * @brief       Start button click handler
+ **/
 void UserScreen::on_pushButton_clicked()
 {
 //    cv::Mat rgb;

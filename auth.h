@@ -24,6 +24,7 @@ typedef enum
     USER,   //!< Default user privileges
     DENIED  //!< Access denied
 }Access;
+
 #ifndef AUTH_CPP
 /**
  * @brief       The authentication function

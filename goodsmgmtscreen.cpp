@@ -16,20 +16,31 @@
 #include "ui_goodsmgmtscreen.h"
 #include "windowmanager.h"
 #include <QMessageBox>
+/**
+ * @brief       Window Manager instance
+ * @see         main.cpp
+ **/
 extern WindowManager WMgr;
-
+/**
+ * @brief       GoodsMgmtScreen constructor
+ * @param       [in]    parent - Window parent
+ **/
 GoodsMgmtScreen::GoodsMgmtScreen(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::GoodsMgmtScreen)
 {
     ui->setupUi(this);
 }
-
+/**
+ * @brief       GoodsMgmtScreen destructor
+ **/
 GoodsMgmtScreen::~GoodsMgmtScreen()
 {
     delete ui;
 }
-
+/**
+ * @brief       Add Item button click handler
+ **/
 void GoodsMgmtScreen::on_pushButton_clicked()
 {
     QMessageBox* msg = new QMessageBox(this);
@@ -37,7 +48,9 @@ void GoodsMgmtScreen::on_pushButton_clicked()
     msg->setWindowTitle("Oops!");
     msg->show();
 }
-
+/**
+ * @brief       Edit Item button click handler
+ **/
 void GoodsMgmtScreen::on_pushButton_2_clicked()
 {
     QMessageBox* msg = new QMessageBox(this);
@@ -45,7 +58,9 @@ void GoodsMgmtScreen::on_pushButton_2_clicked()
     msg->setWindowTitle("Oops!");
     msg->show();
 }
-
+/**
+ * @brief       Remove Item button click handler
+ **/
 void GoodsMgmtScreen::on_pushButton_3_clicked()
 {
     QMessageBox* msg = new QMessageBox(this);
@@ -53,7 +68,9 @@ void GoodsMgmtScreen::on_pushButton_3_clicked()
     msg->setWindowTitle("Oops!");
     msg->show();
 }
-
+/**
+ * @brief       Exit button click handler
+ **/
 void GoodsMgmtScreen::on_pushButton_4_clicked()
 {
     WMgr.gs->hide();

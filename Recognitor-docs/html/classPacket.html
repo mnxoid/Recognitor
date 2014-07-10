@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Recognitor: Файл Recognitor/adminscreen.h</title>
+<title>Recognitor: Клас Packet</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,8 +37,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульна&#160;сторінка</span></a></li>
-      <li><a href="annotated.html"><span>Класи</span></a></li>
-      <li class="current"><a href="files.html"><span>Файли</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Класи</span></a></li>
+      <li><a href="files.html"><span>Файли</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,8 +59,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>Файли</span></a></li>
-      <li><a href="globals.html"><span>Елементи&#160;файлу</span></a></li>
+      <li><a href="annotated.html"><span>Класи</span></a></li>
+      <li><a href="classes.html"><span>Алфавітний&#160;покажчик&#160;класів</span></a></li>
+      <li><a href="hierarchy.html"><span>Ієрархія&#160;класів</span></a></li>
+      <li><a href="functions.html"><span>Елементи&#160;класів</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -77,36 +79,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_2f9d1cf102a8565af2cc18331c93e4d5.html">Recognitor</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Класи</a>  </div>
+<a href="#pub-methods">Загальнодоступні елементи</a> &#124;
+<a href="#pri-attribs">Приватні дані</a> &#124;
+<a href="classPacket-members.html">Список всіх елементів</a>  </div>
   <div class="headertitle">
-<div class="title">Файл adminscreen.h</div>  </div>
+<div class="title">Клас Packet</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Administration window header.  
-<a href="#details">Детальніше...</a></p>
-<div class="textblock"><code>#include &lt;QMainWindow&gt;</code><br/>
-</div>
-<p><a href="adminscreen_8h_source.html">Див. вихідні тексти.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
-Класи</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminScreen.html">AdminScreen</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Administrator window class.  <a href="classAdminScreen.html#details">Детальніше...</a><br/></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:a30fc0d2e5589228708582af6b5b2a576"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30fc0d2e5589228708582af6b5b2a576"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Packet</b> (<a class="el" href="classPacket.html">Packet</a> &amp;p)</td></tr>
+<tr class="memitem:a3b5e228aeb6b3b4988f69433a9ccfb57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5e228aeb6b3b4988f69433a9ccfb57"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Packet</b> (RQTYPE REQUEST_ID, int SESSION_ID, int SIZE, char *DATA)</td></tr>
+<tr class="memitem:a0a267f964f5d9bf71159103eda50fbec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a267f964f5d9bf71159103eda50fbec"></a>
+QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>getBytes</b> ()</td></tr>
+<tr class="memitem:aeca5b2428ba736a24fe08c7322b74bb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeca5b2428ba736a24fe08c7322b74bb0"></a>
+<a class="el" href="classPacket.html">Packet</a>&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (QString IP, int port)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Приватні дані</h2></td></tr>
+<tr class="memitem:a1e3e5174c14d3fa58d84e3449fbc8528"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e3e5174c14d3fa58d84e3449fbc8528"></a>
+RQTYPE&#160;</td><td class="memItemRight" valign="bottom"><b>REQUEST_ID</b></td></tr>
+<tr class="memitem:ab961c50e0041597c29c52d1e397c5f91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab961c50e0041597c29c52d1e397c5f91"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SESSION_ID</b></td></tr>
+<tr class="memitem:a095ff3c0e41af547f0f7cc2464b0cb87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a095ff3c0e41af547f0f7cc2464b0cb87"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE</b></td></tr>
+<tr class="memitem:abc0a29f961bdd40de882e39601884866"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc0a29f961bdd40de882e39601884866"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>DATA</b></td></tr>
 </table>
-<a name="details" id="details"></a><h2>Детальний опис</h2>
-<div class="textblock"><p>Administration window header. </p>
-<dl class="section author"><dt>Автор</dt><dd>mnxoid</dd></dl>
-<p>Copyright 2014 by mnxoid,</p>
-<p>This software is the confidential and proprietary information of mnxoid ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in accordance with the terms of the license agreement you entered into with mnxoid. </p>
-</div></div><!-- contents -->
+<hr/>Документація цих класів була створена з файлів:<ul>
+<li>Recognitor/<a class="el" href="packet_8h_source.html">packet.h</a></li>
+<li>Recognitor/packet.cpp</li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Документація до Recognitor створена Fri Jul 11 2014 01:16:22 системою &#160;<a href="http://www.doxygen.org/index.html">

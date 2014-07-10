@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Recognitor: Файл Recognitor/adminscreen.h</title>
+<title>Recognitor: Текст програми Recognitor/packet.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,30 +83,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Класи</a>  </div>
   <div class="headertitle">
-<div class="title">Файл adminscreen.h</div>  </div>
+<div class="title">packet.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Administration window header.  
-<a href="#details">Детальніше...</a></p>
-<div class="textblock"><code>#include &lt;QMainWindow&gt;</code><br/>
-</div>
-<p><a href="adminscreen_8h_source.html">Див. вихідні тексти.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
-Класи</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminScreen.html">AdminScreen</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Administrator window class.  <a href="classAdminScreen.html#details">Детальніше...</a><br/></td></tr>
-</table>
-<a name="details" id="details"></a><h2>Детальний опис</h2>
-<div class="textblock"><p>Administration window header. </p>
-<dl class="section author"><dt>Автор</dt><dd>mnxoid</dd></dl>
-<p>Copyright 2014 by mnxoid,</p>
-<p>This software is the confidential and proprietary information of mnxoid ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in accordance with the terms of the license agreement you entered into with mnxoid. </p>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PACKET_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PACKET_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QTcpServer&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    AUTH,   </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    RESP,   </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    EMPTY   </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;} RQTYPE;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classPacket.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPacket.html">Packet</a> : <span class="keyword">public</span> QTcpServer</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    RQTYPE REQUEST_ID;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> SESSION_ID;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> SIZE;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span>* DATA;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classPacket.html">Packet</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classPacket.html">Packet</a>(<a class="code" href="classPacket.html">Packet</a>&amp; p);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classPacket.html">Packet</a>(RQTYPE REQUEST_ID, <span class="keywordtype">int</span> SESSION_ID, <span class="keywordtype">int</span> SIZE, <span class="keywordtype">char</span>* DATA);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    QByteArray getBytes();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classPacket.html">Packet</a> send(QString IP,<span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif // PACKET_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Документація до Recognitor створена Fri Jul 11 2014 01:16:22 системою &#160;<a href="http://www.doxygen.org/index.html">

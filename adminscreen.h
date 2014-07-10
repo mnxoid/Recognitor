@@ -18,12 +18,12 @@
 #include <QMainWindow>
 
 namespace Ui {
-/**
- * @brief       Administrator window class
- **/
 class AdminScreen;
 }
 
+/**
+ * @brief       Administrator window class
+ **/
 class AdminScreen : public QMainWindow
 {
     Q_OBJECT

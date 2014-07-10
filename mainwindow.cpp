@@ -17,26 +17,39 @@
 #include "auth.h"
 #include "windowmanager.h"
 #include <QMessageBox>
+/**
+ * @brief       Window Manager instance
+ * @see         main.cpp
+ **/
 extern WindowManager WMgr;
-
+/**
+ * @brief       MainWindow constructor
+ * @param       [in]    parent - Window parent
+ **/
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 }
-
+/**
+ * @brief       MainWindow destructor
+ **/
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
+/**
+ * @brief       Exit button click handler
+ **/
 void MainWindow::on_pushButton_2_clicked()
 {
     //Exit button
     QApplication::quit();
 }
-
+/**
+ * @brief       Login button click handler
+ **/
 void MainWindow::on_pushButton_clicked()
 {
     //Login button

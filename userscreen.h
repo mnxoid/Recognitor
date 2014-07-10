@@ -20,22 +20,37 @@
 namespace Ui {
 class UserScreen;
 }
-
+/**
+ * @brief       User window class
+ **/
 class UserScreen : public QMainWindow
 {
     Q_OBJECT
     
 public:
+    /**
+     * @brief       UserScreen constructor
+     * @param       [in]    parent - Window parent
+     **/
     explicit UserScreen(QWidget *parent = 0);
+    /**
+     * @brief       UserScreen destructor
+     **/
     ~UserScreen();
     
 private slots:
+    /**
+     * @brief       Exit button click handler
+     **/
     void on_pushButton_2_clicked();
 
+    /**
+     * @brief       Start button click handler
+     **/
     void on_pushButton_clicked();
 
 private:
-    Ui::UserScreen *ui;
+    Ui::UserScreen *ui; //!< User interface reference
 };
 
 #endif // USERSCREEN_H

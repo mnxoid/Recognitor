@@ -21,21 +21,36 @@ namespace Ui {
 class MainWindow;
 }
 
+/**
+ * @brief       Main window class
+ **/
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
     
 public:
+    /**
+     * @brief       MainWindow constructor
+     * @param       [in]    parent - Window parent
+     **/
     explicit MainWindow(QWidget *parent = 0);
+    /**
+     * @brief       MainWindow destructor
+     **/
     ~MainWindow();
     
 private slots:
+    /**
+     * @brief       Exit button click handler
+     **/
     void on_pushButton_2_clicked();
-
+    /**
+     * @brief       Login button click handler
+     **/
     void on_pushButton_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui; //!< User interface reference
 };
 
 #endif // MAINWINDOW_H

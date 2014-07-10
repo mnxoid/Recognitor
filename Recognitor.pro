@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,7 +22,8 @@ SOURCES += main.cpp\
     exuserscreen.cpp \
     goodsmgmtscreen.cpp \
     cvtoqt.cpp \
-    cameracapture.cpp
+    cameracapture.cpp \
+    packet.cpp
 
 HEADERS  += mainwindow.h \
     auth.h \
@@ -31,7 +33,8 @@ HEADERS  += mainwindow.h \
     exuserscreen.h \
     goodsmgmtscreen.h \
     cvtoqt.h \
-    cameracapture.h
+    cameracapture.h \
+    packet.h
 
 FORMS    += mainwindow.ui \
     adminscreen.ui \
