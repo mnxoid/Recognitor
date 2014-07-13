@@ -6,6 +6,7 @@ var searchData=
   ['ui_5fgoodsmgmtscreen',['Ui_GoodsMgmtScreen',['../classUi__GoodsMgmtScreen.html',1,'']]],
   ['ui_5fmainwindow',['Ui_MainWindow',['../classUi__MainWindow.html',1,'']]],
   ['ui_5fuserscreen',['Ui_UserScreen',['../classUi__UserScreen.html',1,'']]],
+  ['updatepic',['updatePic',['../classCameraCapture.html#a4d5f58489a06c0f2dc17da937701849e',1,'CameraCapture']]],
   ['us',['us',['../classWindowManager.html#ad6bc24911495de7f8d1e39ae00914475',1,'WindowManager']]],
   ['user',['USER',['../auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b',1,'auth.h']]],
   ['userscreen',['UserScreen',['../classUi_1_1UserScreen.html',1,'Ui']]],

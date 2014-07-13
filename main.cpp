@@ -16,7 +16,10 @@
 #include "mainwindow.h"
 #include "windowmanager.h"
 #include <X11/Xlib.h>
-WindowManager WMgr; //!< WindowManager instance
+#include "cameracapture.h"
+WindowManager WMgr;     //!< WindowManager instance
+int isCapturing = 0;    //!< Determines, whether capturing session is active
+CameraCapture* cc;      //!< CameraCapture instance
 int main(int argc, char *argv[])
 {
     XInitThreads();

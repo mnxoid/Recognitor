@@ -23,9 +23,7 @@ SOURCES += main.cpp\
     goodsmgmtscreen.cpp \
     cvtoqt.cpp \
     cameracapture.cpp \
-    packet.cpp \
-    responsive.cpp \
-    imshowable.cpp
+    packet.cpp
 
 HEADERS  += mainwindow.h \
     auth.h \
@@ -36,9 +34,7 @@ HEADERS  += mainwindow.h \
     goodsmgmtscreen.h \
     cvtoqt.h \
     cameracapture.h \
-    packet.h \
-    responsive.h \
-    imshowable.h
+    packet.h
 
 FORMS    += mainwindow.ui \
     adminscreen.ui \

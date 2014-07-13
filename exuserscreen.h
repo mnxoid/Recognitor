@@ -16,16 +16,15 @@
 #define EXUSERSCREEN_H
 
 #include <QMainWindow>
-#include "responsive.h"
-#include "imshowable.h"
-extern int isCapturing; //!< Determines, whether capturing session is active
+#include <opencv2/highgui/highgui.hpp>
+
 namespace Ui {
 class ExUserScreen;
 }
 /**
  * @brief       Extended User window class
  **/
-class ExUserScreen : public QMainWindow, public Responsive, public ImShowable
+class ExUserScreen : public QMainWindow
 {
     Q_OBJECT
     
@@ -40,7 +39,13 @@ public:
      **/
     ~ExUserScreen();
 public slots:
+    /**
+     * @brief       Unexpected end of capturing handler
+     **/
     void respond();
+    /**
+     * @brief       Camera stream receiver
+     **/
     void imShow(cv::Mat m);
     
 private slots:

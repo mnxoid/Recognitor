@@ -10,6 +10,7 @@ Main source file.
 {\ttfamily \#include \char`\"{}mainwindow.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}windowmanager.\-h\char`\"{}}\\*
 {\ttfamily \#include $<$X11/\-Xlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}cameracapture.\-h\char`\"{}}\\*
 \subsection*{Функції}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,7 +21,12 @@ Main source file.
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classWindowManager}{Window\-Manager} \hyperlink{main_8cpp_a398def1a3b87c400e0a053b875bf4d93}{W\-Mgr}
-\begin{DoxyCompactList}\small\item\em \hyperlink{classWindowManager}{Window\-Manager} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWindowManager}{Window\-Manager} instance. \end{DoxyCompactList}\item 
+\hypertarget{main_8cpp_add53acba88e1ae4f2143baff6786f953}{int \hyperlink{main_8cpp_add53acba88e1ae4f2143baff6786f953}{is\-Capturing} = 0}\label{main_8cpp_add53acba88e1ae4f2143baff6786f953}
+
+\begin{DoxyCompactList}\small\item\em Determines, whether capturing session is active. \end{DoxyCompactList}\item 
+\hyperlink{classCameraCapture}{Camera\-Capture} $\ast$ \hyperlink{main_8cpp_a55ac8a828f46a342155dc9da52187524}{cc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCameraCapture}{Camera\-Capture} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Детальний опис}
@@ -32,7 +38,14 @@ Copyright 2014 by mnxoid,
 This software is the confidential and proprietary information of mnxoid (\char`\"{}\-Confidential Information\char`\"{}). You shall not disclose such Confidential Information and shall use it only in accordance with the terms of the license agreement you entered into with mnxoid. 
 
 \subsection{Опис змінних}
-\hypertarget{main_8cpp_a398def1a3b87c400e0a053b875bf4d93}{\index{main.\-cpp@{main.\-cpp}!W\-Mgr@{W\-Mgr}}
+\hypertarget{main_8cpp_a55ac8a828f46a342155dc9da52187524}{\index{main.\-cpp@{main.\-cpp}!cc@{cc}}
+\index{cc@{cc}!main.cpp@{main.\-cpp}}
+\subsubsection[{cc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera\-Capture}$\ast$ cc}}\label{main_8cpp_a55ac8a828f46a342155dc9da52187524}
+
+
+\hyperlink{classCameraCapture}{Camera\-Capture} instance. 
+
+Camera capture instance. \hypertarget{main_8cpp_a398def1a3b87c400e0a053b875bf4d93}{\index{main.\-cpp@{main.\-cpp}!W\-Mgr@{W\-Mgr}}
 \index{W\-Mgr@{W\-Mgr}!main.cpp@{main.\-cpp}}
 \subsubsection[{W\-Mgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\-Manager} W\-Mgr}}\label{main_8cpp_a398def1a3b87c400e0a053b875bf4d93}
 

@@ -18,7 +18,7 @@
 #include "cameracapture.h"
 #include "cvtoqt.h"
 #include <QDebug>
-int isCapturing = 0; //!< Determines, whether capturing session is active
+extern int isCapturing; //!< Determines, whether capturing session is active
 /**
  * @brief       Window Manager instance
  * @see         main.cpp
@@ -28,7 +28,7 @@ extern WindowManager WMgr;
  * @brief       Camera capture instance
  * @see         CameraCapture
  **/
-CameraCapture* cc;
+extern CameraCapture* cc;
 /**
  * @brief       ExUserScreen constructor
  * @param       [in]    parent - Window parent
@@ -51,6 +51,12 @@ ExUserScreen::~ExUserScreen()
  **/
 void ExUserScreen::on_pushButton_2_clicked()
 {
+    if(isCapturing)
+    {
+        isCapturing = 0;
+        ui->pushButton->setText("START");
+        cc->End();
+    }
     WMgr.xu->hide();
     WMgr.mw->show();
 }
@@ -74,6 +80,7 @@ void ExUserScreen::on_pushButton_clicked()
         isCapturing = 0;
         ui->pushButton->setText("START");
         cc->End();
+        delete cc;
     }
 }
 /**
@@ -81,17 +88,29 @@ void ExUserScreen::on_pushButton_clicked()
  **/
 void ExUserScreen::on_pushButton_3_clicked()
 {
+    if(isCapturing)
+    {
+        isCapturing = 0;
+        ui->pushButton->setText("START");
+        cc->End();
+        delete cc;
+    }
     WMgr.xu->hide();
     WMgr.gs->show();
-    cc->End();
-    delete cc;
 }
- void ExUserScreen::respond()
- {
+/**
+ * @brief       Unexpected end of capturing handler
+ **/
+void ExUserScreen::respond()
+{
      isCapturing = 0;
      ui->pushButton->setText("START");
      cc->End();
- }
+     delete cc;
+}
+/**
+ * @brief       Camera stream receiver
+ **/
 void ExUserScreen::imShow(cv::Mat m)
 {
    // qDebug() << "ExUserScreen::imShow called";

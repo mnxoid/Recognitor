@@ -10,6 +10,15 @@ A class for capturing frames from the camera.
 
 {\ttfamily \#include $<$cameracapture.\-h$>$}
 
+\subsection*{Сигнали}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCameraCapture_a4d5f58489a06c0f2dc17da937701849e}{void \hyperlink{classCameraCapture_a4d5f58489a06c0f2dc17da937701849e}{update\-Pic} (cv\-::\-Mat m)}\label{classCameraCapture_a4d5f58489a06c0f2dc17da937701849e}
+
+\begin{DoxyCompactList}\small\item\em This signal sends a picture to the window. \end{DoxyCompactList}\item 
+\hypertarget{classCameraCapture_a0626cba6e42bc84228d96fbb959fffe1}{void \hyperlink{classCameraCapture_a0626cba6e42bc84228d96fbb959fffe1}{response} ()}\label{classCameraCapture_a0626cba6e42bc84228d96fbb959fffe1}
+
+\begin{DoxyCompactList}\small\item\em This signal tells about unexpected end of capturing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Загальнодоступні елементи}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,12 +30,18 @@ A class for capturing frames from the camera.
 \hypertarget{classCameraCapture_ab29bec18aca2752893b0dcd6b1870cc9}{void \hyperlink{classCameraCapture_ab29bec18aca2752893b0dcd6b1870cc9}{End} ()}\label{classCameraCapture_ab29bec18aca2752893b0dcd6b1870cc9}
 
 \begin{DoxyCompactList}\small\item\em This function cancels the capturing thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Приватні елементи}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCameraCapture_ae1ee8fdcaae07e3a3aaf86b7d1f24558}{void \hyperlink{classCameraCapture_ae1ee8fdcaae07e3a3aaf86b7d1f24558}{run} ()}\label{classCameraCapture_ae1ee8fdcaae07e3a3aaf86b7d1f24558}
+
+\begin{DoxyCompactList}\small\item\em The main function of the thread (capturing routine) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Приватні дані}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCameraCapture_aa288f3da7bc3cea5f568b64e75a65eaf}{cv\-::\-Video\-Capture $\ast$ {\bfseries cap}}\label{classCameraCapture_aa288f3da7bc3cea5f568b64e75a65eaf}
+\hypertarget{classCameraCapture_aa288f3da7bc3cea5f568b64e75a65eaf}{cv\-::\-Video\-Capture $\ast$ \hyperlink{classCameraCapture_aa288f3da7bc3cea5f568b64e75a65eaf}{cap}}\label{classCameraCapture_aa288f3da7bc3cea5f568b64e75a65eaf}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Video\-Capture object instance. \end{DoxyCompactList}\item 
 \hypertarget{classCameraCapture_ad0703a036cc45c2f8b74c873bca6b5db}{pthread\-\_\-t \hyperlink{classCameraCapture_ad0703a036cc45c2f8b74c873bca6b5db}{pid}}\label{classCameraCapture_ad0703a036cc45c2f8b74c873bca6b5db}
 
 \begin{DoxyCompactList}\small\item\em Capturing thread handle. \end{DoxyCompactList}\item 
@@ -54,6 +69,8 @@ A class for capturing frames from the camera.
 \begin{DoxyParams}[1]{Аргументи}
 \mbox{\tt in}  & {\em par} & -\/ Parent for creating Q\-Message\-Box`es\\
 \hline
+\mbox{\tt in}  & {\em par} & -\/ Parent for creating Q\-Message\-Box`es\\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Повертає}
 Q\-Image Converted from cv\-::\-Mat 
@@ -63,4 +80,5 @@ Q\-Image Converted from cv\-::\-Mat
 Документація цих класів була створена з файлів\-:\begin{DoxyCompactItemize}
 \item 
 Recognitor/\hyperlink{cameracapture_8h}{cameracapture.\-h}\item 
-Recognitor/\hyperlink{cameracapture_8cpp}{cameracapture.\-cpp}\end{DoxyCompactItemize}
+Recognitor/\hyperlink{cameracapture_8cpp}{cameracapture.\-cpp}\item 
+Recognitor-\/build-\/desktop-\/\-Qt\-\_\-4\-\_\-8\-\_\-3\-\_\-in\-\_\-\-P\-A\-T\-H\-\_\-\-\_\-\-System\-\_\-\-\_\-\-Release/moc\-\_\-cameracapture.\-cpp\end{DoxyCompactItemize}

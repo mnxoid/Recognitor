@@ -38,9 +38,6 @@ public:
     /**
      * @brief       CameraCapture constructor
      * @param		[in]		par - Parent for creating QMessageBox`es
-     *
-     * @return		QImage      Converted from cv::Mat
-     *
      **/
     CameraCapture(QWidget *par);
     /**
@@ -51,15 +48,22 @@ public:
      * @brief       This function cancels the capturing thread
      **/
     void End();
-    //void setParent(QWidget* par);
-public slots:
 signals:
+    /**
+     * @brief       This signal sends a picture to the window
+     **/
     void updatePic(cv::Mat m);
+    /**
+     * @brief       This signal tells about unexpected end of capturing
+     **/
     void response();
 private:
-    cv::VideoCapture* cap;
-    pthread_t pid;//!< Capturing thread handle
-    QWidget* parent;//!< Parent for creating QMessageBox`es
+    cv::VideoCapture* cap;      //!< VideoCapture object instance
+    pthread_t pid;              //!< Capturing thread handle
+    QWidget* parent;            //!< Parent for creating QMessageBox`es
+    /**
+     * @brief       The main function of the thread (capturing routine)
+     **/
     void run();
 };
 

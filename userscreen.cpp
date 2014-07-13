@@ -16,12 +16,19 @@
 #include "ui_userscreen.h"
 #include "windowmanager.h"
 #include <opencv2/highgui/highgui.hpp>
+#include "cameracapture.h"
 #include "cvtoqt.h"
+extern int isCapturing; //!< Determines, whether capturing session is active
 /**
  * @brief       Window Manager instance
  * @see         main.cpp
  **/
 extern WindowManager WMgr;
+/**
+ * @brief       Camera capture instance
+ * @see         CameraCapture
+ **/
+extern CameraCapture* cc;
 /**
  * @brief       UserScreen constructor
  * @param       [in]    parent - Window parent
@@ -44,8 +51,15 @@ UserScreen::~UserScreen()
  **/
 void UserScreen::on_pushButton_2_clicked()
 {
-    WMgr.mw->show();//Also consider checking whether scan session is active
-    WMgr.us->hide();//Maybe just disable this button
+    if(isCapturing)
+    {
+        isCapturing = 0;
+        ui->pushButton->setText("START");
+        cc->End();
+        delete cc;
+    }
+    WMgr.mw->show();
+    WMgr.us->hide();
 }
 
 /**
@@ -53,28 +67,40 @@ void UserScreen::on_pushButton_2_clicked()
  **/
 void UserScreen::on_pushButton_clicked()
 {
-//    cv::Mat rgb;
-//    cv::cvtColor(img, rgb, CV_BGR2RGB);
-//    rgb = cv::Mat(rgb.rows, rgb.cols, QImage::Format_RGB888, rgb.data, rgb.bytesPerLine()).clone();
-//    QPixmap qp = QPixmap::fromImage(QImage((unsigned char*) img.data, img.cols, img.rows, QImage::Format_RGB888));
-//    QGraphicsScene scn;
-//    QGraphicsPixmapItem it(qp);
-//    scn.addItem(&it);
-//    ui->graphicsView->setScene(&scn);
-//    ui->graphicsView->show();
-    cv::Mat img = cv::imread("/home/mnxoid/Pictures/union_jack.jpg",CV_LOAD_IMAGE_COLOR);
-    QImage qm = MatToQImage(img);
-    QPixmap px;
-    px.convertFromImage(qm);
-    QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
-    ui->label_3->setPixmap( scaledPixmap);
+    if (isCapturing == 0)
+    {
+        isCapturing = 1;
+        ui->pushButton->setText("STOP");
+        cc = new CameraCapture(this);
+        //cc->setParent(this);
+        qRegisterMetaType<cv::Mat>("cv::Mat");
+        connect(cc, SIGNAL(updatePic(cv::Mat)), this, SLOT(imShow(cv::Mat)));
+        connect(cc, SIGNAL(response()), this, SLOT(respond()));
+        cc->Start();
+        cc->start();
+    } else {
+        isCapturing = 0;
+        ui->pushButton->setText("START");
+        cc->End();
+        delete cc;
+    }
 }
-
+/**
+ * @brief       Unexpected end of capturing handler
+ **/
 void UserScreen::respond()
 {
-
+    if(isCapturing)
+    {
+        isCapturing = 0;
+        ui->pushButton->setText("START");
+        cc->End();
+        delete cc;
+    }
 }
-
+/**
+ * @brief       Camera stream receiver
+ **/
 void UserScreen::imShow(cv::Mat m)
 {
     QImage qm = MatToQImage(m);

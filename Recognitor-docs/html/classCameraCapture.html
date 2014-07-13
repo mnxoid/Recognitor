@@ -82,7 +82,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#signals">Сигнали</a> &#124;
 <a href="#pub-methods">Загальнодоступні елементи</a> &#124;
+<a href="#pri-methods">Приватні елементи</a> &#124;
 <a href="#pri-attribs">Приватні дані</a> &#124;
 <a href="classCameraCapture-members.html">Список всіх елементів</a>  </div>
   <div class="headertitle">
@@ -95,6 +97,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 
 <p><code>#include &lt;<a class="el" href="cameracapture_8h_source.html">cameracapture.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="signals"></a>
+Сигнали</h2></td></tr>
+<tr class="memitem:a4d5f58489a06c0f2dc17da937701849e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d5f58489a06c0f2dc17da937701849e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraCapture.html#a4d5f58489a06c0f2dc17da937701849e">updatePic</a> (cv::Mat m)</td></tr>
+<tr class="memdesc:a4d5f58489a06c0f2dc17da937701849e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal sends a picture to the window. <br/></td></tr>
+<tr class="memitem:a0626cba6e42bc84228d96fbb959fffe1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0626cba6e42bc84228d96fbb959fffe1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraCapture.html#a0626cba6e42bc84228d96fbb959fffe1">response</a> ()</td></tr>
+<tr class="memdesc:a0626cba6e42bc84228d96fbb959fffe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal tells about unexpected end of capturing. <br/></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Загальнодоступні елементи</h2></td></tr>
 <tr class="memitem:a110d7f3ede7cb2e2b24584a9700abd2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraCapture.html#a110d7f3ede7cb2e2b24584a9700abd2f">CameraCapture</a> (QWidget *par)</td></tr>
@@ -106,10 +117,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraCapture.html#ab29bec18aca2752893b0dcd6b1870cc9">End</a> ()</td></tr>
 <tr class="memdesc:ab29bec18aca2752893b0dcd6b1870cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function cancels the capturing thread. <br/></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Приватні елементи</h2></td></tr>
+<tr class="memitem:ae1ee8fdcaae07e3a3aaf86b7d1f24558"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1ee8fdcaae07e3a3aaf86b7d1f24558"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraCapture.html#ae1ee8fdcaae07e3a3aaf86b7d1f24558">run</a> ()</td></tr>
+<tr class="memdesc:ae1ee8fdcaae07e3a3aaf86b7d1f24558"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main function of the thread (capturing routine) <br/></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Приватні дані</h2></td></tr>
 <tr class="memitem:aa288f3da7bc3cea5f568b64e75a65eaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa288f3da7bc3cea5f568b64e75a65eaf"></a>
-cv::VideoCapture *&#160;</td><td class="memItemRight" valign="bottom"><b>cap</b></td></tr>
+cv::VideoCapture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraCapture.html#aa288f3da7bc3cea5f568b64e75a65eaf">cap</a></td></tr>
+<tr class="memdesc:aa288f3da7bc3cea5f568b64e75a65eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">VideoCapture object instance. <br/></td></tr>
 <tr class="memitem:ad0703a036cc45c2f8b74c873bca6b5db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0703a036cc45c2f8b74c873bca6b5db"></a>
 pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraCapture.html#ad0703a036cc45c2f8b74c873bca6b5db">pid</a></td></tr>
 <tr class="memdesc:ad0703a036cc45c2f8b74c873bca6b5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capturing thread handle. <br/></td></tr>
@@ -138,6 +156,7 @@ QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <dl class="params"><dt>Аргументи</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>- Parent for creating QMessageBox`es</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>- Parent for creating QMessageBox`es</td></tr>
   </table>
   </dd>
 </dl>
@@ -148,11 +167,12 @@ QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <hr/>Документація цих класів була створена з файлів:<ul>
 <li>Recognitor/<a class="el" href="cameracapture_8h_source.html">cameracapture.h</a></li>
 <li>Recognitor/<a class="el" href="cameracapture_8cpp.html">cameracapture.cpp</a></li>
+<li>Recognitor-build-desktop-Qt_4_8_3_in_PATH__System__Release/moc_cameracapture.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Sun Jul 13 2014 18:45:00 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Mon Jul 14 2014 01:38:01 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

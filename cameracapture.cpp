@@ -16,8 +16,6 @@
 #include <pthread.h>
 #include <QMessageBox>
 #include <QDebug>
-#include "responsive.h"
-#include "imshowable.h"
 /**
  * @brief       CameraCapture constructor
  * @param		[in]		par - Parent for creating QMessageBox`es
@@ -29,18 +27,7 @@ CameraCapture::CameraCapture(QWidget* par)
 {
     parent = par;
 }
-/**
- * @brief       The capturing thread function
- * @param		[in]		arg - the arguments
- * @see         ARGS
- *
- * @return		void*       NULL
- *
- **/
-//void CameraCapture::setParent(QWidget *par)
-//{
-//    parent = par;
-//}
+
 
 /**
  * @brief       This function does initialization and starts the capturing thread
@@ -55,45 +42,24 @@ void CameraCapture::Start()
             msg->setWindowTitle("Oops!");
             msg->show();
         }
-//    //double dWidth = cap.get(CV_CAP_PROP_FRAME_WIDTH); //get the width of frames of the video
-//    //double dHeight = cap.get(CV_CAP_PROP_FRAME_HEIGHT); //get the height of frames of the video
-//    ARGS arg;
-//    arg.pid = pid;
-//    arg.cap = cap;
-//    arg.parent = parent;
-//    int err = pthread_create(&pid, NULL, &lf, &arg);
-//    if (err != 0)
-//    {
-//        QMessageBox* msg = new QMessageBox(parent);
-//        msg->setText("Sorry, an error occured while trying to create a thread.");
-//        msg->setWindowTitle("Oops!");
-//        msg->show();
-//    }
 }
+/**
+ * @brief       The main function of the thread (capturing routine)
+ **/
 void CameraCapture::run()
 {
     cv::Mat frame;
-    //ARGS* args = (ARGS*)arg;
+
     while(true)
     {
         bool bSuccess = cap->read(frame); // read a new frame from video
-
         if (!bSuccess) //if not success, break loop
         {
-//            QMessageBox* msg = new QMessageBox(NULL);
-//            msg->setText("Cannot read a frame from video stream");
-//            msg->setWindowTitle("Oops!");
-//            msg->show();
             qDebug() << "Cannot read a frame from video stream";
             break;
         }
-        //qDebug() << "trying to show";
-        //((ImShowable*)(args->parent))->imShow(frame);
         emit CameraCapture::updatePic(frame);
-        //qDebug() << "showed";
-                //cv::imshow("MyVideo", frame); //show the frame in "MyVideo" window
-                cv::waitKey(20);
-
+        cv::waitKey(20);
     }
     qDebug() << "Thread ended";
     if (cap) delete cap;
@@ -107,11 +73,3 @@ void CameraCapture::End()
     this->terminate();
     if (cap) delete cap;
 }
-//void CameraCapture::response()
-//{
-
-//}
-//void CameraCapture::updatePic(cv::Mat m)
-//{
-
-//}

@@ -10,12 +10,18 @@ User window implementation.
 {\ttfamily \#include \char`\"{}ui\-\_\-userscreen.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}windowmanager.\-h\char`\"{}}\\*
 {\ttfamily \#include $<$opencv2/highgui/highgui.\-hpp$>$}\\*
+{\ttfamily \#include \char`\"{}cameracapture.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}cvtoqt.\-h\char`\"{}}\\*
 \subsection*{Змінні}
 \begin{DoxyCompactItemize}
 \item 
+\hypertarget{userscreen_8cpp_add53acba88e1ae4f2143baff6786f953}{int \hyperlink{userscreen_8cpp_add53acba88e1ae4f2143baff6786f953}{is\-Capturing}}\label{userscreen_8cpp_add53acba88e1ae4f2143baff6786f953}
+
+\begin{DoxyCompactList}\small\item\em Determines, whether capturing session is active. \end{DoxyCompactList}\item 
 \hyperlink{classWindowManager}{Window\-Manager} \hyperlink{userscreen_8cpp_a398def1a3b87c400e0a053b875bf4d93}{W\-Mgr}
-\begin{DoxyCompactList}\small\item\em Window Manager instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Window Manager instance. \end{DoxyCompactList}\item 
+\hyperlink{classCameraCapture}{Camera\-Capture} $\ast$ \hyperlink{userscreen_8cpp_a55ac8a828f46a342155dc9da52187524}{cc}
+\begin{DoxyCompactList}\small\item\em Camera capture instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Детальний опис}
@@ -27,6 +33,16 @@ Copyright 2014 by mnxoid,
 This software is the confidential and proprietary information of mnxoid (\char`\"{}\-Confidential Information\char`\"{}). You shall not disclose such Confidential Information and shall use it only in accordance with the terms of the license agreement you entered into with mnxoid. 
 
 \subsection{Опис змінних}
+\hypertarget{userscreen_8cpp_a55ac8a828f46a342155dc9da52187524}{\index{userscreen.\-cpp@{userscreen.\-cpp}!cc@{cc}}
+\index{cc@{cc}!userscreen.cpp@{userscreen.\-cpp}}
+\subsubsection[{cc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera\-Capture}$\ast$ cc}}\label{userscreen_8cpp_a55ac8a828f46a342155dc9da52187524}
+
+
+Camera capture instance. 
+
+\begin{DoxySeeAlso}{Див. також}
+\hyperlink{classCameraCapture}{Camera\-Capture} 
+\end{DoxySeeAlso}
 \hypertarget{userscreen_8cpp_a398def1a3b87c400e0a053b875bf4d93}{\index{userscreen.\-cpp@{userscreen.\-cpp}!W\-Mgr@{W\-Mgr}}
 \index{W\-Mgr@{W\-Mgr}!userscreen.cpp@{userscreen.\-cpp}}
 \subsubsection[{W\-Mgr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\-Manager} W\-Mgr}}\label{userscreen_8cpp_a398def1a3b87c400e0a053b875bf4d93}
