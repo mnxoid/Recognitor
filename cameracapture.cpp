@@ -17,6 +17,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include "responsive.h"
+#include "imshowable.h"
 /**
  * @brief       CameraCapture constructor
  * @param		[in]		par - Parent for creating QMessageBox`es
@@ -36,7 +37,11 @@ CameraCapture::CameraCapture(QWidget* par)
  * @return		void*       NULL
  *
  **/
-void* lf(void* arg);
+//void CameraCapture::setParent(QWidget *par)
+//{
+//    parent = par;
+//}
+
 /**
  * @brief       This function does initialization and starts the capturing thread
  **/
@@ -50,28 +55,28 @@ void CameraCapture::Start()
             msg->setWindowTitle("Oops!");
             msg->show();
         }
-    //double dWidth = cap.get(CV_CAP_PROP_FRAME_WIDTH); //get the width of frames of the video
-    //double dHeight = cap.get(CV_CAP_PROP_FRAME_HEIGHT); //get the height of frames of the video
-    ARGS arg;
-    arg.pid = pid;
-    arg.cap = cap;
-    arg.parent = parent;
-    int err = pthread_create(&pid, NULL, &lf, &arg);
-    if (err != 0)
-    {
-        QMessageBox* msg = new QMessageBox(parent);
-        msg->setText("Sorry, an error occured while trying to create a thread.");
-        msg->setWindowTitle("Oops!");
-        msg->show();
-    }
+//    //double dWidth = cap.get(CV_CAP_PROP_FRAME_WIDTH); //get the width of frames of the video
+//    //double dHeight = cap.get(CV_CAP_PROP_FRAME_HEIGHT); //get the height of frames of the video
+//    ARGS arg;
+//    arg.pid = pid;
+//    arg.cap = cap;
+//    arg.parent = parent;
+//    int err = pthread_create(&pid, NULL, &lf, &arg);
+//    if (err != 0)
+//    {
+//        QMessageBox* msg = new QMessageBox(parent);
+//        msg->setText("Sorry, an error occured while trying to create a thread.");
+//        msg->setWindowTitle("Oops!");
+//        msg->show();
+//    }
 }
-void* lf(void* arg)
+void CameraCapture::run()
 {
     cv::Mat frame;
-    ARGS* args = (ARGS*)arg;
+    //ARGS* args = (ARGS*)arg;
     while(true)
     {
-        bool bSuccess = args->cap->read(frame); // read a new frame from video
+        bool bSuccess = cap->read(frame); // read a new frame from video
 
         if (!bSuccess) //if not success, break loop
         {
@@ -82,25 +87,31 @@ void* lf(void* arg)
             qDebug() << "Cannot read a frame from video stream";
             break;
         }
+        //qDebug() << "trying to show";
+        //((ImShowable*)(args->parent))->imShow(frame);
+        emit CameraCapture::updatePic(frame);
+        //qDebug() << "showed";
+                //cv::imshow("MyVideo", frame); //show the frame in "MyVideo" window
+                cv::waitKey(20);
 
-                cv::imshow("MyVideo", frame); //show the frame in "MyVideo" window
-
-                if (cv::waitKey(30) == 27) //wait for 'esc' key press for 30ms. If 'esc' key is pressed, break loop
-        {
-
-        break;
-        }
     }
     qDebug() << "Thread ended";
-    if (args->cap) delete args->cap;
-    ((Responsive*)(args->parent))->respond();
-    return NULL;
+    if (cap) delete cap;
+    emit CameraCapture::response();
 }
 /**
  * @brief       This function cancels the capturing thread
  **/
 void CameraCapture::End()
 {
-    pthread_cancel(pid);
+    this->terminate();
     if (cap) delete cap;
 }
+//void CameraCapture::response()
+//{
+
+//}
+//void CameraCapture::updatePic(cv::Mat m)
+//{
+
+//}

@@ -16,6 +16,8 @@
 #include "windowmanager.h"
 #include <QMessageBox>
 #include "cameracapture.h"
+#include "cvtoqt.h"
+#include <QDebug>
 int isCapturing = 0; //!< Determines, whether capturing session is active
 /**
  * @brief       Window Manager instance
@@ -62,7 +64,12 @@ void ExUserScreen::on_pushButton_clicked()
         isCapturing = 1;
         ui->pushButton->setText("STOP");
         cc = new CameraCapture(this);
+        //cc->setParent(this);
+        qRegisterMetaType<cv::Mat>("cv::Mat");
+        connect(cc, SIGNAL(updatePic(cv::Mat)), this, SLOT(imShow(cv::Mat)));
+        connect(cc, SIGNAL(response()), this, SLOT(respond()));
         cc->Start();
+        cc->start();
     } else {
         isCapturing = 0;
         ui->pushButton->setText("START");
@@ -85,3 +92,12 @@ void ExUserScreen::on_pushButton_3_clicked()
      ui->pushButton->setText("START");
      cc->End();
  }
+void ExUserScreen::imShow(cv::Mat m)
+{
+   // qDebug() << "ExUserScreen::imShow called";
+    QImage qm = MatToQImage(m);
+    QPixmap px;
+    px.convertFromImage(qm);
+    QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
+    ui->label_3->setPixmap( scaledPixmap);
+}

@@ -24,7 +24,15 @@ A class for Client-\/\-Server communication.
 Q\-Byte\-Array \hyperlink{classPacket_a0a267f964f5d9bf71159103eda50fbec}{get\-Bytes} ()
 \begin{DoxyCompactList}\small\item\em Raw packet getter. \end{DoxyCompactList}\item 
 \hyperlink{classPacket}{Packet} \hyperlink{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}{send} (Q\-String I\-P, int port)
-\begin{DoxyCompactList}\small\item\em Communication function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Communication function. \end{DoxyCompactList}\item 
+\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} \hyperlink{classPacket_aa1e7e204d2ba664112050246d11bb86c}{get\-Request\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em Request I\-D getter. \end{DoxyCompactList}\item 
+int \hyperlink{classPacket_a65b04ece5e53c1de54ee9315b7ff4a07}{get\-Session\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em Session I\-D getter. \end{DoxyCompactList}\item 
+int \hyperlink{classPacket_abb2c4b6aeb0254214210ae9542574609}{get\-Data\-Size} ()
+\begin{DoxyCompactList}\small\item\em Raw data size getter. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classPacket_ac4dc8bfb2c1839018b5a2a4ddf815fdb}{raw\-Data} ()
+\begin{DoxyCompactList}\small\item\em Raw data getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Приватні дані}
 \begin{DoxyCompactItemize}
 \item 
@@ -87,6 +95,65 @@ Raw packet getter.
 
 \begin{DoxyReturn}{Повертає}
 Q\-Byte\-Array -\/ packet (ready to be sent) 
+\end{DoxyReturn}
+\hypertarget{classPacket_abb2c4b6aeb0254214210ae9542574609}{\index{Packet@{Packet}!get\-Data\-Size@{get\-Data\-Size}}
+\index{get\-Data\-Size@{get\-Data\-Size}!Packet@{Packet}}
+\subsubsection[{get\-Data\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Packet\-::get\-Data\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPacket_abb2c4b6aeb0254214210ae9542574609}
+
+
+Raw data size getter. 
+
+\begin{DoxyReturn}{Повертає}
+int -\/ Raw data size 
+\end{DoxyReturn}
+\hypertarget{classPacket_aa1e7e204d2ba664112050246d11bb86c}{\index{Packet@{Packet}!get\-Request\-I\-D@{get\-Request\-I\-D}}
+\index{get\-Request\-I\-D@{get\-Request\-I\-D}!Packet@{Packet}}
+\subsubsection[{get\-Request\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Q\-T\-Y\-P\-E} Packet\-::get\-Request\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPacket_aa1e7e204d2ba664112050246d11bb86c}
+
+
+Request I\-D getter. 
+
+\begin{DoxyReturn}{Повертає}
+R\-Q\-T\-Y\-P\-E -\/ Request I\-D 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Див. також}
+\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} 
+\end{DoxySeeAlso}
+\hypertarget{classPacket_a65b04ece5e53c1de54ee9315b7ff4a07}{\index{Packet@{Packet}!get\-Session\-I\-D@{get\-Session\-I\-D}}
+\index{get\-Session\-I\-D@{get\-Session\-I\-D}!Packet@{Packet}}
+\subsubsection[{get\-Session\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Packet\-::get\-Session\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPacket_a65b04ece5e53c1de54ee9315b7ff4a07}
+
+
+Session I\-D getter. 
+
+\begin{DoxyReturn}{Повертає}
+int -\/ Session I\-D 
+\end{DoxyReturn}
+\hypertarget{classPacket_ac4dc8bfb2c1839018b5a2a4ddf815fdb}{\index{Packet@{Packet}!raw\-Data@{raw\-Data}}
+\index{raw\-Data@{raw\-Data}!Packet@{Packet}}
+\subsubsection[{raw\-Data}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Packet\-::raw\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPacket_ac4dc8bfb2c1839018b5a2a4ddf815fdb}
+
+
+Raw data getter. 
+
+\begin{DoxyReturn}{Повертає}
+char$\ast$ -\/ Raw data 
 \end{DoxyReturn}
 \hypertarget{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}{\index{Packet@{Packet}!send@{send}}
 \index{send@{send}!Packet@{Packet}}

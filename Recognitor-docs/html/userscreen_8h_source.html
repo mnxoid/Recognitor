@@ -92,32 +92,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define USERSCREEN_H</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html" title="User window class.">UserScreen</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classUserScreen.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html" title="User window class.">UserScreen</a> : <span class="keyword">public</span> QMainWindow</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classUserScreen.html#a27136456b8f1b4d10dfe1cbfc9c43d7c" title="UserScreen constructor.">UserScreen</a>(QWidget *parent = 0);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classUserScreen.html#a30ef13619f5f42c72064ccd57df79e82" title="UserScreen destructor.">~UserScreen</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e25c29ff53726317f4056b66fcb9a18" title="Exit button click handler.">on_pushButton_2_clicked</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e79ba614aa7a1af1520cc78d5e7c264" title="Start button click handler.">on_pushButton_clicked</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8">   53</a></span>&#160;    <a class="code" href="classUi_1_1UserScreen.html">Ui::UserScreen</a> *<a class="code" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8" title="User interface reference.">ui</a>; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;responsive.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;imshowable.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//extern int isCapturing; //!&lt; Determines, whether capturing session is active</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html" title="User window class.">UserScreen</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classUserScreen.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html" title="User window class.">UserScreen</a> : <span class="keyword">public</span> QMainWindow, <span class="keyword">public</span> <a class="code" href="classResponsive.html">Responsive</a>, <span class="keyword">public</span> <a class="code" href="classImShowable.html">ImShowable</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classUserScreen.html#a27136456b8f1b4d10dfe1cbfc9c43d7c" title="UserScreen constructor.">UserScreen</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classUserScreen.html#a30ef13619f5f42c72064ccd57df79e82" title="UserScreen destructor.">~UserScreen</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> respond();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> imShow(cv::Mat m);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e25c29ff53726317f4056b66fcb9a18" title="Exit button click handler.">on_pushButton_2_clicked</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e79ba614aa7a1af1520cc78d5e7c264" title="Start button click handler.">on_pushButton_clicked</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // USERSCREEN_H</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8">   57</a></span>&#160;    <a class="code" href="classUi_1_1UserScreen.html">Ui::UserScreen</a> *<a class="code" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8" title="User interface reference.">ui</a>; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif // USERSCREEN_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Fri Jul 11 2014 13:53:20 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Sun Jul 13 2014 18:45:00 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

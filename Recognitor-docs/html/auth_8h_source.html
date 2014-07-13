@@ -90,24 +90,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <a href="auth_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef AUTH_H</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AUTH_H</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a3228e792244f936584abc6e3d7542d2c">   22</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a3228e792244f936584abc6e3d7542d2c" title="Administrator privileges.">ADMIN</a>,  </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a02570c2bd30d794ff48c3b6369fb3545">   23</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a02570c2bd30d794ff48c3b6369fb3545" title="Extended user privileges.">EXUSER</a>, </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b">   24</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b" title="Default user privileges.">USER</a>,   </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a08f1ea1cb5cac34a4f4237e5259fcabb">   25</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a08f1ea1cb5cac34a4f4237e5259fcabb" title="Access denied.">DENIED</a>  </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}<a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951" title="Enumeration with types of access privileges.">Access</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef AUTH_CPP</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">extern</span> <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951" title="Enumeration with types of access privileges.">Access</a> <a class="code" href="auth_8cpp.html#a4d0f4bb0edb145ecb5a92671df487468" title="The authentication function.">Check</a>(QString login, QString pwd);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // AUTH_H</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="auth_8cpp.html#aa3399d04c16cf0fde5d6280bd3abd803" title="Current SESSION_ID.">session</a>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a3228e792244f936584abc6e3d7542d2c">   23</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a3228e792244f936584abc6e3d7542d2c" title="Administrator privileges.">ADMIN</a>,  </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a02570c2bd30d794ff48c3b6369fb3545">   24</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a02570c2bd30d794ff48c3b6369fb3545" title="Extended user privileges.">EXUSER</a>, </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b">   25</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951ae2d30a195cee6b2961cc2c23ea4b520b" title="Default user privileges.">USER</a>,   </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a08f1ea1cb5cac34a4f4237e5259fcabb">   26</a></span>&#160;    <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951a08f1ea1cb5cac34a4f4237e5259fcabb" title="Access denied.">DENIED</a>  </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}<a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951" title="Enumeration with types of access privileges.">Access</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef AUTH_CPP</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">extern</span> <a class="code" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951" title="Enumeration with types of access privileges.">Access</a> <a class="code" href="auth_8cpp.html#a4d0f4bb0edb145ecb5a92671df487468" title="The authentication function.">Check</a>(QString login, QString pwd);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // AUTH_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Fri Jul 11 2014 13:53:20 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Sun Jul 13 2014 18:45:00 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

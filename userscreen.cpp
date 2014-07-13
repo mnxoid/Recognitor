@@ -69,3 +69,17 @@ void UserScreen::on_pushButton_clicked()
     QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
     ui->label_3->setPixmap( scaledPixmap);
 }
+
+void UserScreen::respond()
+{
+
+}
+
+void UserScreen::imShow(cv::Mat m)
+{
+    QImage qm = MatToQImage(m);
+    QPixmap px;
+    px.convertFromImage(qm);
+    QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
+    ui->label_3->setPixmap( scaledPixmap);
+}

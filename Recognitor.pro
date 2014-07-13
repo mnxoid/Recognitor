@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     cvtoqt.cpp \
     cameracapture.cpp \
     packet.cpp \
-    responsive.cpp
+    responsive.cpp \
+    imshowable.cpp
 
 HEADERS  += mainwindow.h \
     auth.h \
@@ -36,7 +37,8 @@ HEADERS  += mainwindow.h \
     cvtoqt.h \
     cameracapture.h \
     packet.h \
-    responsive.h
+    responsive.h \
+    imshowable.h
 
 FORMS    += mainwindow.ui \
     adminscreen.ui \

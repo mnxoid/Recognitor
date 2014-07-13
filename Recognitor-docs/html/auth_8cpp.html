@@ -85,7 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <div class="header">
   <div class="summary">
 <a href="#define-members">Макроозначення</a> &#124;
-<a href="#func-members">Функції</a>  </div>
+<a href="#func-members">Функції</a> &#124;
+<a href="#var-members">Змінні</a>  </div>
   <div class="headertitle">
 <div class="title">Файл auth.cpp</div>  </div>
 </div><!--header-->
@@ -95,11 +96,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <a href="#details">Детальніше...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="auth_8h_source.html">auth.h</a>&quot;</code><br/>
 <code>#include &lt;QString&gt;</code><br/>
+<code>#include &lt;QDebug&gt;</code><br/>
+<code>#include &quot;<a class="el" href="packet_8h_source.html">packet.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Функції</h2></td></tr>
 <tr class="memitem:a4d0f4bb0edb145ecb5a92671df487468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="auth_8h.html#a7da68dc8ab4fb9bae588bdd1f6afc951">Access</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auth_8cpp.html#a4d0f4bb0edb145ecb5a92671df487468">Check</a> (QString login, QString pwd)</td></tr>
 <tr class="memdesc:a4d0f4bb0edb145ecb5a92671df487468"><td class="mdescLeft">&#160;</td><td class="mdescRight">The authentication function.  <a href="#a4d0f4bb0edb145ecb5a92671df487468"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+Змінні</h2></td></tr>
+<tr class="memitem:aa3399d04c16cf0fde5d6280bd3abd803"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3399d04c16cf0fde5d6280bd3abd803"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auth_8cpp.html#aa3399d04c16cf0fde5d6280bd3abd803">session</a> = 0</td></tr>
+<tr class="memdesc:aa3399d04c16cf0fde5d6280bd3abd803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current SESSION_ID. <br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Детальний опис</h2>
 <div class="textblock"><p>Authentication implementation. </p>
@@ -147,7 +156,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Fri Jul 11 2014 13:53:20 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Sun Jul 13 2014 18:45:00 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

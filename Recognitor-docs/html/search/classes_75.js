@@ -5,6 +5,6 @@ var searchData=
   ['ui_5fgoodsmgmtscreen',['Ui_GoodsMgmtScreen',['../classUi__GoodsMgmtScreen.html',1,'']]],
   ['ui_5fmainwindow',['Ui_MainWindow',['../classUi__MainWindow.html',1,'']]],
   ['ui_5fuserscreen',['Ui_UserScreen',['../classUi__UserScreen.html',1,'']]],
-  ['userscreen',['UserScreen',['../classUi_1_1UserScreen.html',1,'Ui']]],
-  ['userscreen',['UserScreen',['../classUserScreen.html',1,'']]]
+  ['userscreen',['UserScreen',['../classUserScreen.html',1,'']]],
+  ['userscreen',['UserScreen',['../classUi_1_1UserScreen.html',1,'Ui']]]
 ];

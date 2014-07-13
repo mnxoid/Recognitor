@@ -16,6 +16,8 @@
 #include <pthread.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <QWidget>
+#include <QObject>
+#include <QThread>
 /**
  * @brief       The arguments for the capturing thread function
  * @see         lf()
@@ -29,8 +31,9 @@ struct ARGS
 /**
  * @brief       A class for capturing frames from the camera
  **/
-class CameraCapture
+class CameraCapture : public QThread
 {
+    Q_OBJECT
 public:
     /**
      * @brief       CameraCapture constructor
@@ -48,10 +51,16 @@ public:
      * @brief       This function cancels the capturing thread
      **/
     void End();
+    //void setParent(QWidget* par);
+public slots:
+signals:
+    void updatePic(cv::Mat m);
+    void response();
 private:
     cv::VideoCapture* cap;
     pthread_t pid;//!< Capturing thread handle
     QWidget* parent;//!< Parent for creating QMessageBox`es
+    void run();
 };
 
 #endif // CAMERACAPTURE_H

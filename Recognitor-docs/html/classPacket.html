@@ -109,6 +109,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <tr class="memdesc:a0a267f964f5d9bf71159103eda50fbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw packet getter.  <a href="#a0a267f964f5d9bf71159103eda50fbec"></a><br/></td></tr>
 <tr class="memitem:aeca5b2428ba736a24fe08c7322b74bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPacket.html">Packet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#aeca5b2428ba736a24fe08c7322b74bb0">send</a> (QString IP, int port)</td></tr>
 <tr class="memdesc:aeca5b2428ba736a24fe08c7322b74bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Communication function.  <a href="#aeca5b2428ba736a24fe08c7322b74bb0"></a><br/></td></tr>
+<tr class="memitem:aa1e7e204d2ba664112050246d11bb86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3">RQTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#aa1e7e204d2ba664112050246d11bb86c">getRequestID</a> ()</td></tr>
+<tr class="memdesc:aa1e7e204d2ba664112050246d11bb86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request ID getter.  <a href="#aa1e7e204d2ba664112050246d11bb86c"></a><br/></td></tr>
+<tr class="memitem:a65b04ece5e53c1de54ee9315b7ff4a07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#a65b04ece5e53c1de54ee9315b7ff4a07">getSessionID</a> ()</td></tr>
+<tr class="memdesc:a65b04ece5e53c1de54ee9315b7ff4a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Session ID getter.  <a href="#a65b04ece5e53c1de54ee9315b7ff4a07"></a><br/></td></tr>
+<tr class="memitem:abb2c4b6aeb0254214210ae9542574609"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#abb2c4b6aeb0254214210ae9542574609">getDataSize</a> ()</td></tr>
+<tr class="memdesc:abb2c4b6aeb0254214210ae9542574609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw data size getter.  <a href="#abb2c4b6aeb0254214210ae9542574609"></a><br/></td></tr>
+<tr class="memitem:ac4dc8bfb2c1839018b5a2a4ddf815fdb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#ac4dc8bfb2c1839018b5a2a4ddf815fdb">rawData</a> ()</td></tr>
+<tr class="memdesc:ac4dc8bfb2c1839018b5a2a4ddf815fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw data getter.  <a href="#ac4dc8bfb2c1839018b5a2a4ddf815fdb"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Приватні дані</h2></td></tr>
@@ -196,6 +204,79 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 </div>
 </div>
+<a class="anchor" id="abb2c4b6aeb0254214210ae9542574609"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Packet::getDataSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raw data size getter. </p>
+<dl class="section return"><dt>Повертає</dt><dd>int - Raw data size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa1e7e204d2ba664112050246d11bb86c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3">RQTYPE</a> Packet::getRequestID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Request ID getter. </p>
+<dl class="section return"><dt>Повертає</dt><dd>RQTYPE - Request ID </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3" title="Enumeration with types of requests.">RQTYPE</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65b04ece5e53c1de54ee9315b7ff4a07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Packet::getSessionID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Session ID getter. </p>
+<dl class="section return"><dt>Повертає</dt><dd>int - Session ID </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4dc8bfb2c1839018b5a2a4ddf815fdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * Packet::rawData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raw data getter. </p>
+<dl class="section return"><dt>Повертає</dt><dd>char* - Raw data </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aeca5b2428ba736a24fe08c7322b74bb0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +320,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Fri Jul 11 2014 13:53:20 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Sun Jul 13 2014 18:45:02 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
