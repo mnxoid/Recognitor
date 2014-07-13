@@ -16,14 +16,15 @@
 #define EXUSERSCREEN_H
 
 #include <QMainWindow>
-
+#include "responsive.h"
+extern int isCapturing; //!< Determines, whether capturing session is active
 namespace Ui {
 class ExUserScreen;
 }
 /**
  * @brief       Extended User window class
  **/
-class ExUserScreen : public QMainWindow
+class ExUserScreen : public QMainWindow, public Responsive
 {
     Q_OBJECT
     
@@ -37,6 +38,7 @@ public:
      * @brief       ExUserScreen destructor
      **/
     ~ExUserScreen();
+    void respond();
     
 private slots:
     /**

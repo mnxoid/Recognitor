@@ -16,6 +16,7 @@
 #include "windowmanager.h"
 #include <QMessageBox>
 #include "cameracapture.h"
+int isCapturing = 0; //!< Determines, whether capturing session is active
 /**
  * @brief       Window Manager instance
  * @see         main.cpp
@@ -56,8 +57,17 @@ void ExUserScreen::on_pushButton_2_clicked()
  **/
 void ExUserScreen::on_pushButton_clicked()
 {
-    cc = new CameraCapture(this);
-    cc->Start();
+    if (isCapturing == 0)
+    {
+        isCapturing = 1;
+        ui->pushButton->setText("STOP");
+        cc = new CameraCapture(this);
+        cc->Start();
+    } else {
+        isCapturing = 0;
+        ui->pushButton->setText("START");
+        cc->End();
+    }
 }
 /**
  * @brief       Manage Goods button click handler
@@ -69,3 +79,9 @@ void ExUserScreen::on_pushButton_3_clicked()
     cc->End();
     delete cc;
 }
+ void ExUserScreen::respond()
+ {
+     isCapturing = 0;
+     ui->pushButton->setText("START");
+     cc->End();
+ }

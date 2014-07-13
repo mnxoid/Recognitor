@@ -89,37 +89,157 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <div class="title">Клас Packet</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for Client-Server communication.  
+ <a href="classPacket.html#details">Детальніше...</a></p>
+
+<p><code>#include &lt;<a class="el" href="packet_8h_source.html">packet.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Загальнодоступні елементи</h2></td></tr>
+<tr class="memitem:aabcfb963c0d5bc0fa554668f92989622"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabcfb963c0d5bc0fa554668f92989622"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#aabcfb963c0d5bc0fa554668f92989622">Packet</a> ()</td></tr>
+<tr class="memdesc:aabcfb963c0d5bc0fa554668f92989622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="classPacket.html" title="A class for Client-Server communication.">Packet</a> constructor. <br/></td></tr>
 <tr class="memitem:a30fc0d2e5589228708582af6b5b2a576"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30fc0d2e5589228708582af6b5b2a576"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Packet</b> (<a class="el" href="classPacket.html">Packet</a> &amp;p)</td></tr>
-<tr class="memitem:a3b5e228aeb6b3b4988f69433a9ccfb57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5e228aeb6b3b4988f69433a9ccfb57"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Packet</b> (RQTYPE REQUEST_ID, int SESSION_ID, int SIZE, char *DATA)</td></tr>
-<tr class="memitem:a0a267f964f5d9bf71159103eda50fbec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a267f964f5d9bf71159103eda50fbec"></a>
-QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>getBytes</b> ()</td></tr>
-<tr class="memitem:aeca5b2428ba736a24fe08c7322b74bb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeca5b2428ba736a24fe08c7322b74bb0"></a>
-<a class="el" href="classPacket.html">Packet</a>&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (QString IP, int port)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#a30fc0d2e5589228708582af6b5b2a576">Packet</a> (<a class="el" href="classPacket.html">Packet</a> &amp;p)</td></tr>
+<tr class="memdesc:a30fc0d2e5589228708582af6b5b2a576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy <a class="el" href="classPacket.html" title="A class for Client-Server communication.">Packet</a> constructor. <br/></td></tr>
+<tr class="memitem:a3b5e228aeb6b3b4988f69433a9ccfb57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#a3b5e228aeb6b3b4988f69433a9ccfb57">Packet</a> (<a class="el" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3">RQTYPE</a> <a class="el" href="classPacket.html#a1e3e5174c14d3fa58d84e3449fbc8528">REQUEST_ID</a>, int <a class="el" href="classPacket.html#ab961c50e0041597c29c52d1e397c5f91">SESSION_ID</a>, int <a class="el" href="classPacket.html#a095ff3c0e41af547f0f7cc2464b0cb87">SIZE</a>, char *<a class="el" href="classPacket.html#abc0a29f961bdd40de882e39601884866">DATA</a>)</td></tr>
+<tr class="memdesc:a3b5e228aeb6b3b4988f69433a9ccfb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full-parameter <a class="el" href="classPacket.html" title="A class for Client-Server communication.">Packet</a> constructor.  <a href="#a3b5e228aeb6b3b4988f69433a9ccfb57"></a><br/></td></tr>
+<tr class="memitem:a0a267f964f5d9bf71159103eda50fbec"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#a0a267f964f5d9bf71159103eda50fbec">getBytes</a> ()</td></tr>
+<tr class="memdesc:a0a267f964f5d9bf71159103eda50fbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw packet getter.  <a href="#a0a267f964f5d9bf71159103eda50fbec"></a><br/></td></tr>
+<tr class="memitem:aeca5b2428ba736a24fe08c7322b74bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPacket.html">Packet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#aeca5b2428ba736a24fe08c7322b74bb0">send</a> (QString IP, int port)</td></tr>
+<tr class="memdesc:aeca5b2428ba736a24fe08c7322b74bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Communication function.  <a href="#aeca5b2428ba736a24fe08c7322b74bb0"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Приватні дані</h2></td></tr>
 <tr class="memitem:a1e3e5174c14d3fa58d84e3449fbc8528"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e3e5174c14d3fa58d84e3449fbc8528"></a>
-RQTYPE&#160;</td><td class="memItemRight" valign="bottom"><b>REQUEST_ID</b></td></tr>
+<a class="el" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3">RQTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#a1e3e5174c14d3fa58d84e3449fbc8528">REQUEST_ID</a></td></tr>
+<tr class="memdesc:a1e3e5174c14d3fa58d84e3449fbc8528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request type. <br/></td></tr>
 <tr class="memitem:ab961c50e0041597c29c52d1e397c5f91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab961c50e0041597c29c52d1e397c5f91"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SESSION_ID</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#ab961c50e0041597c29c52d1e397c5f91">SESSION_ID</a></td></tr>
+<tr class="memdesc:ab961c50e0041597c29c52d1e397c5f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Session key. <br/></td></tr>
 <tr class="memitem:a095ff3c0e41af547f0f7cc2464b0cb87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a095ff3c0e41af547f0f7cc2464b0cb87"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#a095ff3c0e41af547f0f7cc2464b0cb87">SIZE</a></td></tr>
+<tr class="memdesc:a095ff3c0e41af547f0f7cc2464b0cb87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data size. <br/></td></tr>
 <tr class="memitem:abc0a29f961bdd40de882e39601884866"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc0a29f961bdd40de882e39601884866"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>DATA</b></td></tr>
+char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPacket.html#abc0a29f961bdd40de882e39601884866">DATA</a></td></tr>
+<tr class="memdesc:abc0a29f961bdd40de882e39601884866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw packet data. <br/></td></tr>
 </table>
+<a name="details" id="details"></a><h2>Детальний опис</h2>
+<div class="textblock"><p>A class for Client-Server communication. </p>
+</div><h2>Конструктор(и)</h2>
+<a class="anchor" id="a3b5e228aeb6b3b4988f69433a9ccfb57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Packet::Packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3">RQTYPE</a>&#160;</td>
+          <td class="paramname"><em>REQUEST_ID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>SESSION_ID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>SIZE</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>DATA</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Full-parameter <a class="el" href="classPacket.html" title="A class for Client-Server communication.">Packet</a> constructor. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">REQUEST_ID</td><td>- Request type </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">SESSION_ID</td><td>- Session key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">SIZE</td><td>- Data size </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">DATA</td><td>- Raw packet data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2>Опис методів компонент</h2>
+<a class="anchor" id="a0a267f964f5d9bf71159103eda50fbec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray Packet::getBytes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raw packet getter. </p>
+<dl class="section return"><dt>Повертає</dt><dd>QByteArray - packet (ready to be sent) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeca5b2428ba736a24fe08c7322b74bb0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPacket.html">Packet</a> Packet::send </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>IP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Communication function. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">IP</td><td>- server IP-address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>- server port </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd><a class="el" href="classPacket.html" title="A class for Client-Server communication.">Packet</a> - server response </dd></dl>
+
+</div>
+</div>
 <hr/>Документація цих класів була створена з файлів:<ul>
 <li>Recognitor/<a class="el" href="packet_8h_source.html">packet.h</a></li>
-<li>Recognitor/packet.cpp</li>
+<li>Recognitor/<a class="el" href="packet_8cpp.html">packet.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Fri Jul 11 2014 01:16:22 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Fri Jul 11 2014 13:53:20 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

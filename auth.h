@@ -14,6 +14,7 @@
 
 #ifndef AUTH_H
 #define AUTH_H
+extern int session; //!< Current SESSION_ID
 /**
  * @brief       Enumeration with types of access privileges
  **/

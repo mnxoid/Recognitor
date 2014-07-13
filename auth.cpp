@@ -15,6 +15,9 @@
 #define AUTH_CPP
 #include "auth.h"
 #include <QString>
+#include <QDebug>
+#include "packet.h"
+int session = 0; //!< Current SESSION_ID
 /**
  * @brief       The authentication function
  * @param		[in]		login - User name
@@ -26,14 +29,30 @@
  **/
 Access Check(QString login, QString pwd)
 {
-    if (login == "Admin") {
-        return ADMIN;
-    } else if (login == "ExUser") {
-        return EXUSER;
-    } else if (login == "User") {
-        return USER;
-    } else {
-        return DENIED;
-    }
+    char *data = (char*)malloc(2*sizeof(int)+login.length()+pwd.length());
+    *((int*)data) = login.length();
+    *((int*)data+1) = pwd.length();
+    strncpy(data+2*sizeof(int),login.toStdString().c_str(),login.length());
+    strncpy(data+2*sizeof(int)+login.length(),pwd.toStdString().c_str(),pwd.length());
+    Packet p(AUTH,session,2*sizeof(int)+login.length()+pwd.length(),data);
+//    Packet resp = p.send("127.0.0.1",1337);
+//    if (resp.getRequestID()==RESP_OK)
+//    {
+//        session = resp.getSessionID();
+//        data = resp.rawData();
+//        Access a = *((Access*)data);
+//        return a;
+        if (login == "Admin") {
+            return ADMIN;
+        } else if (login == "ExUser") {
+            return EXUSER;
+        } else if (login == "User") {
+            return USER;
+        } else {
+            return DENIED;
+        }
+//    } else {
+//        qDebug() << "Error: Bad request";
+//    }
 }
 #undef AUTH_CPP

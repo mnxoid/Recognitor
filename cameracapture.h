@@ -24,7 +24,7 @@ struct ARGS
 {
     pthread_t pid;          //!< Capturing thread handle
     cv::VideoCapture* cap;  //!< VideoCapture object
-    //QWidget* parent;
+    QWidget* parent;        //!< Parent object (caller)
 };
 /**
  * @brief       A class for capturing frames from the camera
@@ -49,6 +49,7 @@ public:
      **/
     void End();
 private:
+    cv::VideoCapture* cap;
     pthread_t pid;//!< Capturing thread handle
     QWidget* parent;//!< Parent for creating QMessageBox`es
 };

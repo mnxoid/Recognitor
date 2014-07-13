@@ -1,39 +1,118 @@
 \hypertarget{classPacket}{\section{Клас Packet}
 \label{classPacket}\index{Packet@{Packet}}
 }
+
+
+A class for Client-\/\-Server communication.  
+
+
+
+
+{\ttfamily \#include $<$packet.\-h$>$}
+
 \subsection*{Загальнодоступні елементи}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classPacket_a30fc0d2e5589228708582af6b5b2a576}{{\bfseries Packet} (\hyperlink{classPacket}{Packet} \&p)}\label{classPacket_a30fc0d2e5589228708582af6b5b2a576}
+\hypertarget{classPacket_aabcfb963c0d5bc0fa554668f92989622}{\hyperlink{classPacket_aabcfb963c0d5bc0fa554668f92989622}{Packet} ()}\label{classPacket_aabcfb963c0d5bc0fa554668f92989622}
 
-\item 
-\hypertarget{classPacket_a3b5e228aeb6b3b4988f69433a9ccfb57}{{\bfseries Packet} (R\-Q\-T\-Y\-P\-E R\-E\-Q\-U\-E\-S\-T\-\_\-\-I\-D, int S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D, int S\-I\-Z\-E, char $\ast$D\-A\-T\-A)}\label{classPacket_a3b5e228aeb6b3b4988f69433a9ccfb57}
+\begin{DoxyCompactList}\small\item\em Default \hyperlink{classPacket}{Packet} constructor. \end{DoxyCompactList}\item 
+\hypertarget{classPacket_a30fc0d2e5589228708582af6b5b2a576}{\hyperlink{classPacket_a30fc0d2e5589228708582af6b5b2a576}{Packet} (\hyperlink{classPacket}{Packet} \&p)}\label{classPacket_a30fc0d2e5589228708582af6b5b2a576}
 
-\item 
-\hypertarget{classPacket_a0a267f964f5d9bf71159103eda50fbec}{Q\-Byte\-Array {\bfseries get\-Bytes} ()}\label{classPacket_a0a267f964f5d9bf71159103eda50fbec}
-
-\item 
-\hypertarget{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}{\hyperlink{classPacket}{Packet} {\bfseries send} (Q\-String I\-P, int port)}\label{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Copy \hyperlink{classPacket}{Packet} constructor. \end{DoxyCompactList}\item 
+\hyperlink{classPacket_a3b5e228aeb6b3b4988f69433a9ccfb57}{Packet} (\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} \hyperlink{classPacket_a1e3e5174c14d3fa58d84e3449fbc8528}{R\-E\-Q\-U\-E\-S\-T\-\_\-\-I\-D}, int \hyperlink{classPacket_ab961c50e0041597c29c52d1e397c5f91}{S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D}, int \hyperlink{classPacket_a095ff3c0e41af547f0f7cc2464b0cb87}{S\-I\-Z\-E}, char $\ast$\hyperlink{classPacket_abc0a29f961bdd40de882e39601884866}{D\-A\-T\-A})
+\begin{DoxyCompactList}\small\item\em Full-\/parameter \hyperlink{classPacket}{Packet} constructor. \end{DoxyCompactList}\item 
+Q\-Byte\-Array \hyperlink{classPacket_a0a267f964f5d9bf71159103eda50fbec}{get\-Bytes} ()
+\begin{DoxyCompactList}\small\item\em Raw packet getter. \end{DoxyCompactList}\item 
+\hyperlink{classPacket}{Packet} \hyperlink{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}{send} (Q\-String I\-P, int port)
+\begin{DoxyCompactList}\small\item\em Communication function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Приватні дані}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classPacket_a1e3e5174c14d3fa58d84e3449fbc8528}{R\-Q\-T\-Y\-P\-E {\bfseries R\-E\-Q\-U\-E\-S\-T\-\_\-\-I\-D}}\label{classPacket_a1e3e5174c14d3fa58d84e3449fbc8528}
+\hypertarget{classPacket_a1e3e5174c14d3fa58d84e3449fbc8528}{\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} \hyperlink{classPacket_a1e3e5174c14d3fa58d84e3449fbc8528}{R\-E\-Q\-U\-E\-S\-T\-\_\-\-I\-D}}\label{classPacket_a1e3e5174c14d3fa58d84e3449fbc8528}
 
-\item 
-\hypertarget{classPacket_ab961c50e0041597c29c52d1e397c5f91}{int {\bfseries S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D}}\label{classPacket_ab961c50e0041597c29c52d1e397c5f91}
+\begin{DoxyCompactList}\small\item\em Request type. \end{DoxyCompactList}\item 
+\hypertarget{classPacket_ab961c50e0041597c29c52d1e397c5f91}{int \hyperlink{classPacket_ab961c50e0041597c29c52d1e397c5f91}{S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D}}\label{classPacket_ab961c50e0041597c29c52d1e397c5f91}
 
-\item 
-\hypertarget{classPacket_a095ff3c0e41af547f0f7cc2464b0cb87}{int {\bfseries S\-I\-Z\-E}}\label{classPacket_a095ff3c0e41af547f0f7cc2464b0cb87}
+\begin{DoxyCompactList}\small\item\em Session key. \end{DoxyCompactList}\item 
+\hypertarget{classPacket_a095ff3c0e41af547f0f7cc2464b0cb87}{int \hyperlink{classPacket_a095ff3c0e41af547f0f7cc2464b0cb87}{S\-I\-Z\-E}}\label{classPacket_a095ff3c0e41af547f0f7cc2464b0cb87}
 
-\item 
-\hypertarget{classPacket_abc0a29f961bdd40de882e39601884866}{char $\ast$ {\bfseries D\-A\-T\-A}}\label{classPacket_abc0a29f961bdd40de882e39601884866}
+\begin{DoxyCompactList}\small\item\em Data size. \end{DoxyCompactList}\item 
+\hypertarget{classPacket_abc0a29f961bdd40de882e39601884866}{char $\ast$ \hyperlink{classPacket_abc0a29f961bdd40de882e39601884866}{D\-A\-T\-A}}\label{classPacket_abc0a29f961bdd40de882e39601884866}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Raw packet data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Детальний опис}
+A class for Client-\/\-Server communication. 
+
+\subsection{Конструктор(и)}
+\hypertarget{classPacket_a3b5e228aeb6b3b4988f69433a9ccfb57}{\index{Packet@{Packet}!Packet@{Packet}}
+\index{Packet@{Packet}!Packet@{Packet}}
+\subsubsection[{Packet}]{\setlength{\rightskip}{0pt plus 5cm}Packet\-::\-Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-Q\-T\-Y\-P\-E}}]{R\-E\-Q\-U\-E\-S\-T\-\_\-\-I\-D, }
+\item[{int}]{S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D, }
+\item[{int}]{S\-I\-Z\-E, }
+\item[{char $\ast$}]{D\-A\-T\-A}
+\end{DoxyParamCaption}
+)}}\label{classPacket_a3b5e228aeb6b3b4988f69433a9ccfb57}
+
+
+Full-\/parameter \hyperlink{classPacket}{Packet} constructor. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\tt in}  & {\em R\-E\-Q\-U\-E\-S\-T\-\_\-\-I\-D} & -\/ Request type \\
+\hline
+\mbox{\tt in}  & {\em S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D} & -\/ Session key \\
+\hline
+\mbox{\tt in}  & {\em S\-I\-Z\-E} & -\/ Data size \\
+\hline
+\mbox{\tt in}  & {\em D\-A\-T\-A} & -\/ Raw packet data \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Опис методів компонент}
+\hypertarget{classPacket_a0a267f964f5d9bf71159103eda50fbec}{\index{Packet@{Packet}!get\-Bytes@{get\-Bytes}}
+\index{get\-Bytes@{get\-Bytes}!Packet@{Packet}}
+\subsubsection[{get\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Packet\-::get\-Bytes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPacket_a0a267f964f5d9bf71159103eda50fbec}
+
+
+Raw packet getter. 
+
+\begin{DoxyReturn}{Повертає}
+Q\-Byte\-Array -\/ packet (ready to be sent) 
+\end{DoxyReturn}
+\hypertarget{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}{\index{Packet@{Packet}!send@{send}}
+\index{send@{send}!Packet@{Packet}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Packet} Packet\-::send (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{I\-P, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}
+
+
+Communication function. 
+
+
+\begin{DoxyParams}[1]{Аргументи}
+\mbox{\tt in}  & {\em I\-P} & -\/ server I\-P-\/address \\
+\hline
+\mbox{\tt in}  & {\em port} & -\/ server port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+\hyperlink{classPacket}{Packet} -\/ server response 
+\end{DoxyReturn}
 
 
 Документація цих класів була створена з файлів\-:\begin{DoxyCompactItemize}
 \item 
-Recognitor/packet.\-h\item 
-Recognitor/packet.\-cpp\end{DoxyCompactItemize}
+Recognitor/\hyperlink{packet_8h}{packet.\-h}\item 
+Recognitor/\hyperlink{packet_8cpp}{packet.\-cpp}\end{DoxyCompactItemize}

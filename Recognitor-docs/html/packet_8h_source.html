@@ -87,37 +87,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <div class="title">packet.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PACKET_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PACKET_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QTcpServer&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    AUTH,   </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    RESP,   </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    EMPTY   </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;} RQTYPE;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classPacket.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPacket.html">Packet</a> : <span class="keyword">public</span> QTcpServer</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    RQTYPE REQUEST_ID;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> SESSION_ID;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> SIZE;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span>* DATA;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classPacket.html">Packet</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classPacket.html">Packet</a>(<a class="code" href="classPacket.html">Packet</a>&amp; p);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classPacket.html">Packet</a>(RQTYPE REQUEST_ID, <span class="keywordtype">int</span> SESSION_ID, <span class="keywordtype">int</span> SIZE, <span class="keywordtype">char</span>* DATA);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    QByteArray getBytes();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classPacket.html">Packet</a> send(QString IP,<span class="keywordtype">int</span> port);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif // PACKET_H</span></div>
+<a href="packet_8h.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef PACKET_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PACKET_H</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QTcpServer&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3a8b22fbb60fcbd7a4a5e1e6ff6ee38218">   23</a></span>&#160;    <a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3a8b22fbb60fcbd7a4a5e1e6ff6ee38218" title="Authentication.">AUTH</a>,   </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3a659082eece39a8e509757b90252ed089">   24</a></span>&#160;    <a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3a659082eece39a8e509757b90252ed089" title="Server response.">RESP</a>,   </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3a2f0d18fc0d0fa4a6cd92dc328501874d">   25</a></span>&#160;    <a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3a2f0d18fc0d0fa4a6cd92dc328501874d" title="No request.">EMPTY</a>   </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;} <a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3" title="Enumeration with types of requests.">RQTYPE</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classPacket.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPacket.html" title="A class for Client-Server communication.">Packet</a> : <span class="keyword">public</span> QTcpServer</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classPacket.html#a1e3e5174c14d3fa58d84e3449fbc8528">   33</a></span>&#160;    <a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3" title="Enumeration with types of requests.">RQTYPE</a> <a class="code" href="classPacket.html#a1e3e5174c14d3fa58d84e3449fbc8528" title="Request type.">REQUEST_ID</a>;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classPacket.html#ab961c50e0041597c29c52d1e397c5f91">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classPacket.html#ab961c50e0041597c29c52d1e397c5f91" title="Session key.">SESSION_ID</a>;     </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classPacket.html#a095ff3c0e41af547f0f7cc2464b0cb87">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classPacket.html#a095ff3c0e41af547f0f7cc2464b0cb87" title="Data size.">SIZE</a>;           </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classPacket.html#abc0a29f961bdd40de882e39601884866">   36</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="classPacket.html#abc0a29f961bdd40de882e39601884866" title="Raw packet data.">DATA</a>;         </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classPacket.html#aabcfb963c0d5bc0fa554668f92989622" title="Default Packet constructor.">Packet</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classPacket.html#aabcfb963c0d5bc0fa554668f92989622" title="Default Packet constructor.">Packet</a>(<a class="code" href="classPacket.html" title="A class for Client-Server communication.">Packet</a>&amp; p);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classPacket.html#aabcfb963c0d5bc0fa554668f92989622" title="Default Packet constructor.">Packet</a>(<a class="code" href="packet_8h.html#a15e96d9e79cfa4c3aaba6861be4707e3" title="Enumeration with types of requests.">RQTYPE</a> <a class="code" href="classPacket.html#a1e3e5174c14d3fa58d84e3449fbc8528" title="Request type.">REQUEST_ID</a>, <span class="keywordtype">int</span> <a class="code" href="classPacket.html#ab961c50e0041597c29c52d1e397c5f91" title="Session key.">SESSION_ID</a>, <span class="keywordtype">int</span> <a class="code" href="classPacket.html#a095ff3c0e41af547f0f7cc2464b0cb87" title="Data size.">SIZE</a>, <span class="keywordtype">char</span>* <a class="code" href="classPacket.html#abc0a29f961bdd40de882e39601884866" title="Raw packet data.">DATA</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    QByteArray <a class="code" href="classPacket.html#a0a267f964f5d9bf71159103eda50fbec" title="Raw packet getter.">getBytes</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classPacket.html" title="A class for Client-Server communication.">Packet</a> <a class="code" href="classPacket.html#aeca5b2428ba736a24fe08c7322b74bb0" title="Communication function.">send</a>(QString IP,<span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif // PACKET_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Fri Jul 11 2014 01:16:22 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Fri Jul 11 2014 13:53:20 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

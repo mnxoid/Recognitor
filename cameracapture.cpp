@@ -16,6 +16,7 @@
 #include <pthread.h>
 #include <QMessageBox>
 #include <QDebug>
+#include "responsive.h"
 /**
  * @brief       CameraCapture constructor
  * @param		[in]		par - Parent for creating QMessageBox`es
@@ -41,8 +42,8 @@ void* lf(void* arg);
  **/
 void CameraCapture::Start()
 {
-    cv::VideoCapture cap(0);
-    if (!cap.isOpened())  // if not success, exit program
+    cap = new cv::VideoCapture(0);
+    if (!cap->isOpened())  // if not success, exit program
         {
             QMessageBox* msg = new QMessageBox(parent);
             msg->setText("Sorry, an error occured while trying to read camera device.");
@@ -53,8 +54,8 @@ void CameraCapture::Start()
     //double dHeight = cap.get(CV_CAP_PROP_FRAME_HEIGHT); //get the height of frames of the video
     ARGS arg;
     arg.pid = pid;
-    arg.cap = &cap;
-    //arg.parent = parent;
+    arg.cap = cap;
+    arg.parent = parent;
     int err = pthread_create(&pid, NULL, &lf, &arg);
     if (err != 0)
     {
@@ -91,6 +92,8 @@ void* lf(void* arg)
         }
     }
     qDebug() << "Thread ended";
+    if (args->cap) delete args->cap;
+    ((Responsive*)(args->parent))->respond();
     return NULL;
 }
 /**
@@ -99,4 +102,5 @@ void* lf(void* arg)
 void CameraCapture::End()
 {
     pthread_cancel(pid);
+    if (cap) delete cap;
 }
