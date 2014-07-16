@@ -57,10 +57,13 @@ Packet::Packet(RQTYPE REQUEST_ID, int SESSION_ID, int SIZE, char *DATA)
 QByteArray Packet::getBytes()
 {
     QByteArray qa;
-    qa.append(this->REQUEST_ID);
-    qa.append(this->SESSION_ID);
-    qa.append(this->SIZE);
-    qa.append(this->DATA);
+    char* raw=(char*)malloc(2*sizeof(int)+sizeof(RQTYPE)+SIZE);
+    *((RQTYPE*)raw)=REQUEST_ID;
+    *((int*)(raw+sizeof(RQTYPE)))=SESSION_ID;
+    *((int*)(raw+sizeof(RQTYPE))+1)=SIZE;
+    memcpy((char*)raw+sizeof(RQTYPE)+2*sizeof(int),DATA,SIZE);
+    qa.fromRawData(raw,2*sizeof(int)+sizeof(RQTYPE)+SIZE);
+    free(raw);
     return qa;
 }
 /**

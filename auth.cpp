@@ -17,7 +17,7 @@
 #include <QString>
 #include <QDebug>
 #include "packet.h"
-int session = 0; //!< Current SESSION_ID
+extern int session; //!< Current SESSION_ID
 /**
  * @brief       The authentication function
  * @param		[in]		login - User name

@@ -17,6 +17,7 @@
 
 #include <QMainWindow>
 #include <opencv2/highgui/highgui.hpp>
+#include <QTimer>
 
 namespace Ui {
 class ExUserScreen;
@@ -47,7 +48,11 @@ public slots:
      * @brief       Camera stream receiver
      **/
     void imShow(cv::Mat m);
-    
+    /**
+     * @brief       Sender
+     **/
+    void sendPic();
+
 private slots:
     /**
      * @brief       Exit button click handler
@@ -63,9 +68,18 @@ private slots:
      * @brief       Manage Goods button click handler
      **/
     void on_pushButton_3_clicked();
-
+    /**
+     * @brief       Capture stopping handler
+     **/
+    void captureStop();
+signals:
+    /**
+     * @brief       Capture stopper
+     **/
+    void stopCap();
 private:
     Ui::ExUserScreen *ui; //!< User interface reference
+    QTimer* t;          //!< Timer instance
 };
 
 #endif // EXUSERSCREEN_H

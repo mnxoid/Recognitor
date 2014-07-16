@@ -44,3 +44,4 @@ FORMS    += mainwindow.ui \
 INCLUDEPATH += "/usr/local/include/opencv" \
                "/usr/local/include"
 LIBS += `pkg-config --libs opencv`
+LIBS += -lXtst -lX11

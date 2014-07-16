@@ -1,16 +1,16 @@
 /**
- * @file	exuserscreen.cpp
- * @brief	Extended User window implementation
- * @author  mnxoid
- *
- * Copyright 2014 by mnxoid,
- *
- * This software is the confidential and proprietary information
- * of mnxoid ("Confidential Information").  You
- * shall not disclose such Confidential Information and shall use
- * it only in accordance with the terms of the license agreement
- * you entered into with mnxoid.
- **/
+* @file exuserscreen.cpp
+* @brief Extended User window implementation
+* @author mnxoid
+*
+* Copyright 2014 by mnxoid,
+*
+* This software is the confidential and proprietary information
+* of mnxoid ("Confidential Information"). You
+* shall not disclose such Confidential Information and shall use
+* it only in accordance with the terms of the license agreement
+* you entered into with mnxoid.
+**/
 #include "exuserscreen.h"
 #include "ui_exuserscreen.h"
 #include "windowmanager.h"
@@ -20,19 +20,19 @@
 #include <QDebug>
 extern int isCapturing; //!< Determines, whether capturing session is active
 /**
- * @brief       Window Manager instance
- * @see         main.cpp
- **/
+* @brief Window Manager instance
+* @see main.cpp
+**/
 extern WindowManager WMgr;
 /**
- * @brief       Camera capture instance
- * @see         CameraCapture
- **/
+* @brief Camera capture instance
+* @see CameraCapture
+**/
 extern CameraCapture* cc;
 /**
- * @brief       ExUserScreen constructor
- * @param       [in]    parent - Window parent
- **/
+* @brief ExUserScreen constructor
+* @param [in] parent - Window parent
+**/
 ExUserScreen::ExUserScreen(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ExUserScreen)
@@ -40,15 +40,15 @@ ExUserScreen::ExUserScreen(QWidget *parent) :
     ui->setupUi(this);
 }
 /**
- * @brief       ExUserScreen destructor
- **/
+* @brief ExUserScreen destructor
+**/
 ExUserScreen::~ExUserScreen()
 {
     delete ui;
 }
 /**
- * @brief       Exit button click handler
- **/
+* @brief Exit button click handler
+**/
 void ExUserScreen::on_pushButton_2_clicked()
 {
     if(isCapturing)
@@ -61,8 +61,8 @@ void ExUserScreen::on_pushButton_2_clicked()
     WMgr.mw->show();
 }
 /**
- * @brief       Start button click handler
- **/
+* @brief Start button click handler
+**/
 void ExUserScreen::on_pushButton_clicked()
 {
     if (isCapturing == 0)
@@ -77,40 +77,28 @@ void ExUserScreen::on_pushButton_clicked()
         cc->Start();
         cc->start();
     } else {
-        isCapturing = 0;
-        ui->pushButton->setText("START");
-        cc->End();
-        delete cc;
+        emit stopCap();
     }
 }
 /**
- * @brief       Manage Goods button click handler
- **/
+* @brief Manage Goods button click handler
+**/
 void ExUserScreen::on_pushButton_3_clicked()
 {
-    if(isCapturing)
-    {
-        isCapturing = 0;
-        ui->pushButton->setText("START");
-        cc->End();
-        delete cc;
-    }
+    emit stopCap();
     WMgr.xu->hide();
     WMgr.gs->show();
 }
 /**
- * @brief       Unexpected end of capturing handler
- **/
+* @brief Unexpected end of capturing handler
+**/
 void ExUserScreen::respond()
 {
-     isCapturing = 0;
-     ui->pushButton->setText("START");
-     cc->End();
-     delete cc;
+     emit stopCap();
 }
 /**
- * @brief       Camera stream receiver
- **/
+* @brief Camera stream receiver
+**/
 void ExUserScreen::imShow(cv::Mat m)
 {
    // qDebug() << "ExUserScreen::imShow called";
@@ -119,4 +107,25 @@ void ExUserScreen::imShow(cv::Mat m)
     px.convertFromImage(qm);
     QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
     ui->label_3->setPixmap( scaledPixmap);
+}
+/**
+ * @brief       Capture stopping handler
+ **/
+void ExUserScreen::captureStop()
+{
+    if(isCapturing)
+    {
+        isCapturing = 0;
+        ui->pushButton->setText("START");
+        cc->End();
+        delete cc;
+    }
+}
+
+/**
+ * @brief       Sender
+ **/
+void ExUserScreen::sendPic()
+{
+
 }

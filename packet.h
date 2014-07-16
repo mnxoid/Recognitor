@@ -21,6 +21,7 @@
 typedef enum
 {
     AUTH,       //!< Authentication
+    PIC_SEND,   //!< Sending picture
     RESP_OK,    //!< Good server response
     RESP_ERR,   //!< Bad server response
     EMPTY       //!< No request

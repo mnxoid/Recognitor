@@ -20,6 +20,7 @@
 WindowManager WMgr;     //!< WindowManager instance
 int isCapturing = 0;    //!< Determines, whether capturing session is active
 CameraCapture* cc;      //!< CameraCapture instance
+int session = 0;        //!< Connection SESSION_ID
 int main(int argc, char *argv[])
 {
     XInitThreads();
