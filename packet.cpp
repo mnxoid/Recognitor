@@ -32,8 +32,11 @@ Packet::Packet(Packet &p) : QTcpServer()
     this->REQUEST_ID = p.REQUEST_ID;
     this->SESSION_ID = p.SESSION_ID;
     this->SIZE = p.SIZE;
-    this->DATA = (char*)malloc(p.SIZE);
-    memcpy(this->DATA,p.DATA,p.SIZE);
+    if (p.SIZE > 0)
+    {
+        this->DATA = (char*)malloc(p.SIZE);
+        memcpy(this->DATA,p.DATA,p.SIZE);
+    }
 }
 /**
  * @brief       Full-parameter Packet constructor
@@ -44,11 +47,22 @@ Packet::Packet(Packet &p) : QTcpServer()
  **/
 Packet::Packet(RQTYPE REQUEST_ID, int SESSION_ID, int SIZE, char *DATA)
 {
-    this->REQUEST_ID = REQUEST_ID;
+    if (REQUEST_ID <= AUTH || REQUEST_ID >= EMPTY)
+    {
+        this->REQUEST_ID = INT_ERR;
+    } else {
+        this->REQUEST_ID = REQUEST_ID;
+    }
     this->SESSION_ID = SESSION_ID;
-    this->SIZE = SIZE;
-    this->DATA = (char*)malloc(SIZE);
-    memcpy(this->DATA,DATA,SIZE);
+    if (this->REQUEST_ID != INT_ERR)
+    {
+        this->SIZE = SIZE;
+        this->DATA = (char*)malloc(SIZE);
+        memcpy(this->DATA,DATA,SIZE);
+    } else {
+        this->SIZE = 0;
+        this->DATA = NULL;
+    }
 }
 /**
  * @brief       Raw packet getter
@@ -72,7 +86,7 @@ QByteArray Packet::getBytes()
  * @param       [in]        port - server port
  * @return      Packet - server response
  **/
-Packet Packet::send(QString IP, int port)
+Packet* Packet::send(QString IP, int port)
 {
     QTcpSocket socket(this);
     socket.connectToHost(IP,port);
@@ -80,13 +94,20 @@ Packet Packet::send(QString IP, int port)
     stream << this->getBytes();
     QByteArray resp;
     resp = socket.readAll();
-    char *data = resp.data();
-    Packet response((RQTYPE)(*((int*)data)),
+    char *data = (char*)malloc(resp.size());
+    memcpy(data,resp.data(),resp.size());
+    Packet* response = new Packet((RQTYPE)(*((int*)data)),
                     (*((int*)data+1)),
                     (*((int*)data+2)),
                     data+3*sizeof(int)
                     );
-    return response;
+    if (response->validate())
+    {
+        return response;
+    } else {
+        delete response;
+        return new Packet();
+    }
 }
 /**
  * @brief       Request ID getter
@@ -123,4 +144,14 @@ int Packet::getDataSize()
 char* Packet::rawData()
 {
     return DATA;
+}
+/**
+ * @brief       Packet validator
+ * @return      bool - result
+ **/
+bool Packet::validate()
+{
+    if (REQUEST_ID <= AUTH || REQUEST_ID >= EMPTY) return false;
+    if (SIZE > 0 && DATA==NULL) return false;
+    return true;
 }

@@ -24,6 +24,7 @@ typedef enum
     PIC_SEND,   //!< Sending picture
     RESP_OK,    //!< Good server response
     RESP_ERR,   //!< Bad server response
+    INT_ERR,    //!< Internal error
     EMPTY       //!< No request
 } RQTYPE;
 /**
@@ -64,7 +65,7 @@ public:
      * @param       [in]        port - server port
      * @return      Packet - server response
      **/
-    Packet send(QString IP,int port);
+    Packet *send(QString IP,int port);
     /**
      * @brief       Request ID getter
      * @return      RQTYPE - Request ID
@@ -86,6 +87,11 @@ public:
      * @return      char* - Raw data
      **/
     char* rawData();
+    /**
+     * @brief       Packet validator
+     * @return      bool - result
+     **/
+    bool validate();
 };
 
 #endif // PACKET_H

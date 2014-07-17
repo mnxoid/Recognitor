@@ -18,7 +18,11 @@
 #include <opencv2/highgui/highgui.hpp>
 #include "cameracapture.h"
 #include "cvtoqt.h"
+#include "packet.h"
+#include <QTimer>
+
 extern int isCapturing; //!< Determines, whether capturing session is active
+extern int session; //!< Session ID
 /**
 * @brief Window Manager instance
 * @see main.cpp
@@ -38,6 +42,8 @@ UserScreen::UserScreen(QWidget *parent) :
     ui(new Ui::UserScreen)
 {
     ui->setupUi(this);
+    connect(this, SIGNAL(stopCap()), this, SLOT(captureStop()));
+    t = NULL;
 }
 /**
 * @brief UserScreen destructor
@@ -72,6 +78,9 @@ void UserScreen::on_pushButton_clicked()
         connect(cc, SIGNAL(response()), this, SLOT(respond()));
         cc->Start();
         cc->start();
+        t = new QTimer();
+        connect(t, SIGNAL(timeout()), this, SLOT(sendPic()));
+        t->start(ui->spinBox->value());
     } else {
         emit stopCap();
     }
@@ -106,6 +115,11 @@ void UserScreen::captureStop()
         cc->End();
         delete cc;
     }
+    if(t)
+    {
+        t->stop();
+        delete t;
+    }
 }
 
 /**
@@ -113,5 +127,16 @@ void UserScreen::captureStop()
  **/
 void UserScreen::sendPic()
 {
-
+    if(ui->label_3->pixmap())
+    {
+        char *d;
+        int size = ui->label_3->pixmap()->toImage().byteCount();
+        d = (char*)ui->label_3->pixmap()->toImage().bits();
+        Packet p(PIC_SEND, session, size, d);
+        Packet* resp = p.send("127.0.0.1",1337);
+        if (resp->getRequestID() != RESP_OK)
+        {
+            qDebug() << "Error sending pic";
+        }
+    }
 }
