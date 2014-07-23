@@ -103,9 +103,13 @@ void UserScreen::imShow(cv::Mat m)
     px.convertFromImage(qm);
     QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
     QPainter* paint = new QPainter(&scaledPixmap);
-    paint->drawRect(ui->horizontalSlider->value(),ui->horizontalSlider_2->value(),ui->horizontalSlider_3->value(),ui->horizontalSlider_4->value());
+    paint->drawRect(ui->horizontalSlider_2->value(),ui->horizontalSlider_3->value(),ui->horizontalSlider_4->value(),ui->horizontalSlider->value());
     ui->label_3->setPixmap( scaledPixmap);
     delete paint;
+    ui->horizontalSlider_3->setMaximum(scaledPixmap.height());
+    ui->horizontalSlider_2->setMaximum(scaledPixmap.width());
+    ui->horizontalSlider->setMaximum(scaledPixmap.height() - ui->horizontalSlider_3->value());
+    ui->horizontalSlider_4->setMaximum(scaledPixmap.width() - ui->horizontalSlider_2->value());
 }
 /**
  * @brief       Capture stopping handler
@@ -118,6 +122,7 @@ void UserScreen::captureStop()
     {
         isCapturing = 0;
         ui->pushButton->setText("START");
+        cc->terminate();
         cc->End();
         delete cc;
     }

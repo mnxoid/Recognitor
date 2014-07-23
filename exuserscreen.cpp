@@ -120,6 +120,7 @@ void ExUserScreen::captureStop()
     {
         isCapturing = 0;
         ui->pushButton->setText("START");
+        cc->terminate();
         cc->End();
         delete cc;
     }

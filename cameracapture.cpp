@@ -70,6 +70,6 @@ void CameraCapture::run()
  **/
 void CameraCapture::End()
 {
-    this->terminate();
+    //this->terminate();
     if (cap) delete cap;
 }
