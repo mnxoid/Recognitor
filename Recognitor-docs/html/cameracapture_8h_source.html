@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>Recognitor: Текст програми Recognitor/cameracapture.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Створено системою Doxygen 1.8.1.2 -->
+<!-- Створено системою Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </script>
@@ -95,37 +96,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QThread&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="structARGS.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structARGS.html" title="The arguments for the capturing thread function.">ARGS</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structARGS.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structARGS.html">ARGS</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="structARGS.html#af74ee694152c4be9de805a3fe7b709dc">   27</a></span>&#160;    pthread_t <a class="code" href="structARGS.html#af74ee694152c4be9de805a3fe7b709dc" title="Capturing thread handle.">pid</a>;          </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="structARGS.html#a6b299867eec1febb4d3ed313ac73f0d7">   28</a></span>&#160;    cv::VideoCapture* <a class="code" href="structARGS.html#a6b299867eec1febb4d3ed313ac73f0d7" title="VideoCapture object.">cap</a>;  </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="structARGS.html#a761da80183bdbfbf9a293c9ba1130d2c">   29</a></span>&#160;    QWidget* <a class="code" href="structARGS.html#a761da80183bdbfbf9a293c9ba1130d2c" title="Parent object (caller)">parent</a>;        </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structARGS.html#af74ee694152c4be9de805a3fe7b709dc">   27</a></span>&#160;    pthread_t <a class="code" href="structARGS.html#af74ee694152c4be9de805a3fe7b709dc">pid</a>;          </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structARGS.html#a6b299867eec1febb4d3ed313ac73f0d7">   28</a></span>&#160;    cv::VideoCapture* <a class="code" href="structARGS.html#a6b299867eec1febb4d3ed313ac73f0d7">cap</a>;  </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structARGS.html#a761da80183bdbfbf9a293c9ba1130d2c">   29</a></span>&#160;    QWidget* <a class="code" href="structARGS.html#a761da80183bdbfbf9a293c9ba1130d2c">parent</a>;        </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classCameraCapture.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCameraCapture.html" title="A class for capturing frames from the camera.">CameraCapture</a> : <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classCameraCapture.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCameraCapture.html">CameraCapture</a> : <span class="keyword">public</span> QThread</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classCameraCapture.html#a110d7f3ede7cb2e2b24584a9700abd2f" title="CameraCapture constructor.">CameraCapture</a>(QWidget *par);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#a1ab7b68c620d79769afb3920320250fe" title="This function does initialization and starts the capturing thread.">Start</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#ab29bec18aca2752893b0dcd6b1870cc9" title="This function cancels the capturing thread.">End</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classCameraCapture.html#a110d7f3ede7cb2e2b24584a9700abd2f">CameraCapture</a>(QWidget *par);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#a1ab7b68c620d79769afb3920320250fe">Start</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#ab29bec18aca2752893b0dcd6b1870cc9">End</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;signals:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#a4d5f58489a06c0f2dc17da937701849e" title="This signal sends a picture to the window.">updatePic</a>(cv::Mat m);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#a0626cba6e42bc84228d96fbb959fffe1" title="This signal tells about unexpected end of capturing.">response</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#a4d5f58489a06c0f2dc17da937701849e">updatePic</a>(cv::Mat m);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#a0626cba6e42bc84228d96fbb959fffe1">response</a>();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classCameraCapture.html#aa288f3da7bc3cea5f568b64e75a65eaf">   61</a></span>&#160;    cv::VideoCapture* <a class="code" href="classCameraCapture.html#aa288f3da7bc3cea5f568b64e75a65eaf" title="VideoCapture object instance.">cap</a>;      </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classCameraCapture.html#ad0703a036cc45c2f8b74c873bca6b5db">   62</a></span>&#160;    pthread_t <a class="code" href="classCameraCapture.html#ad0703a036cc45c2f8b74c873bca6b5db" title="Capturing thread handle.">pid</a>;              </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="classCameraCapture.html#a7ef70abf92c37be8a342dd8d728a6b03">   63</a></span>&#160;    QWidget* <a class="code" href="classCameraCapture.html#a7ef70abf92c37be8a342dd8d728a6b03" title="Parent for creating QMessageBox`es.">parent</a>;            </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classCameraCapture.html#aa288f3da7bc3cea5f568b64e75a65eaf">   61</a></span>&#160;    cv::VideoCapture* <a class="code" href="classCameraCapture.html#aa288f3da7bc3cea5f568b64e75a65eaf">cap</a>;      </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classCameraCapture.html#ad0703a036cc45c2f8b74c873bca6b5db">   62</a></span>&#160;    pthread_t <a class="code" href="classCameraCapture.html#ad0703a036cc45c2f8b74c873bca6b5db">pid</a>;              </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classCameraCapture.html#a7ef70abf92c37be8a342dd8d728a6b03">   63</a></span>&#160;    QWidget* <a class="code" href="classCameraCapture.html#a7ef70abf92c37be8a342dd8d728a6b03">parent</a>;            </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#ae1ee8fdcaae07e3a3aaf86b7d1f24558" title="The main function of the thread (capturing routine)">run</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCameraCapture.html#ae1ee8fdcaae07e3a3aaf86b7d1f24558">run</a>();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // CAMERACAPTURE_H</span></div>
+<div class="ttc" id="structARGS_html_a761da80183bdbfbf9a293c9ba1130d2c"><div class="ttname"><a href="structARGS.html#a761da80183bdbfbf9a293c9ba1130d2c">ARGS::parent</a></div><div class="ttdeci">QWidget * parent</div><div class="ttdoc">Parent object (caller) </div><div class="ttdef"><b>Definition:</b> cameracapture.h:29</div></div>
+<div class="ttc" id="classCameraCapture_html"><div class="ttname"><a href="classCameraCapture.html">CameraCapture</a></div><div class="ttdoc">A class for capturing frames from the camera. </div><div class="ttdef"><b>Definition:</b> cameracapture.h:34</div></div>
+<div class="ttc" id="classCameraCapture_html_aa288f3da7bc3cea5f568b64e75a65eaf"><div class="ttname"><a href="classCameraCapture.html#aa288f3da7bc3cea5f568b64e75a65eaf">CameraCapture::cap</a></div><div class="ttdeci">cv::VideoCapture * cap</div><div class="ttdoc">VideoCapture object instance. </div><div class="ttdef"><b>Definition:</b> cameracapture.h:61</div></div>
+<div class="ttc" id="structARGS_html"><div class="ttname"><a href="structARGS.html">ARGS</a></div><div class="ttdoc">The arguments for the capturing thread function. </div><div class="ttdef"><b>Definition:</b> cameracapture.h:25</div></div>
+<div class="ttc" id="classCameraCapture_html_a1ab7b68c620d79769afb3920320250fe"><div class="ttname"><a href="classCameraCapture.html#a1ab7b68c620d79769afb3920320250fe">CameraCapture::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">This function does initialization and starts the capturing thread. </div><div class="ttdef"><b>Definition:</b> cameracapture.cpp:35</div></div>
+<div class="ttc" id="classCameraCapture_html_a0626cba6e42bc84228d96fbb959fffe1"><div class="ttname"><a href="classCameraCapture.html#a0626cba6e42bc84228d96fbb959fffe1">CameraCapture::response</a></div><div class="ttdeci">void response()</div><div class="ttdoc">This signal tells about unexpected end of capturing. </div><div class="ttdef"><b>Definition:</b> moc_cameracapture.cpp:139</div></div>
+<div class="ttc" id="classCameraCapture_html_a7ef70abf92c37be8a342dd8d728a6b03"><div class="ttname"><a href="classCameraCapture.html#a7ef70abf92c37be8a342dd8d728a6b03">CameraCapture::parent</a></div><div class="ttdeci">QWidget * parent</div><div class="ttdoc">Parent for creating QMessageBox`es. </div><div class="ttdef"><b>Definition:</b> cameracapture.h:63</div></div>
+<div class="ttc" id="classCameraCapture_html_ab29bec18aca2752893b0dcd6b1870cc9"><div class="ttname"><a href="classCameraCapture.html#ab29bec18aca2752893b0dcd6b1870cc9">CameraCapture::End</a></div><div class="ttdeci">void End()</div><div class="ttdoc">This function cancels the capturing thread. </div><div class="ttdef"><b>Definition:</b> cameracapture.cpp:71</div></div>
+<div class="ttc" id="structARGS_html_af74ee694152c4be9de805a3fe7b709dc"><div class="ttname"><a href="structARGS.html#af74ee694152c4be9de805a3fe7b709dc">ARGS::pid</a></div><div class="ttdeci">pthread_t pid</div><div class="ttdoc">Capturing thread handle. </div><div class="ttdef"><b>Definition:</b> cameracapture.h:27</div></div>
+<div class="ttc" id="classCameraCapture_html_ae1ee8fdcaae07e3a3aaf86b7d1f24558"><div class="ttname"><a href="classCameraCapture.html#ae1ee8fdcaae07e3a3aaf86b7d1f24558">CameraCapture::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">The main function of the thread (capturing routine) </div><div class="ttdef"><b>Definition:</b> cameracapture.cpp:49</div></div>
+<div class="ttc" id="classCameraCapture_html_a4d5f58489a06c0f2dc17da937701849e"><div class="ttname"><a href="classCameraCapture.html#a4d5f58489a06c0f2dc17da937701849e">CameraCapture::updatePic</a></div><div class="ttdeci">void updatePic(cv::Mat m)</div><div class="ttdoc">This signal sends a picture to the window. </div><div class="ttdef"><b>Definition:</b> moc_cameracapture.cpp:132</div></div>
+<div class="ttc" id="classCameraCapture_html_ad0703a036cc45c2f8b74c873bca6b5db"><div class="ttname"><a href="classCameraCapture.html#ad0703a036cc45c2f8b74c873bca6b5db">CameraCapture::pid</a></div><div class="ttdeci">pthread_t pid</div><div class="ttdoc">Capturing thread handle. </div><div class="ttdef"><b>Definition:</b> cameracapture.h:62</div></div>
+<div class="ttc" id="structARGS_html_a6b299867eec1febb4d3ed313ac73f0d7"><div class="ttname"><a href="structARGS.html#a6b299867eec1febb4d3ed313ac73f0d7">ARGS::cap</a></div><div class="ttdeci">cv::VideoCapture * cap</div><div class="ttdoc">VideoCapture object. </div><div class="ttdef"><b>Definition:</b> cameracapture.h:28</div></div>
+<div class="ttc" id="classCameraCapture_html_a110d7f3ede7cb2e2b24584a9700abd2f"><div class="ttname"><a href="classCameraCapture.html#a110d7f3ede7cb2e2b24584a9700abd2f">CameraCapture::CameraCapture</a></div><div class="ttdeci">CameraCapture(QWidget *par)</div><div class="ttdoc">CameraCapture constructor. </div><div class="ttdef"><b>Definition:</b> cameracapture.cpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Mon Jul 14 2014 01:38:01 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Вівторок, 22 липня 2014 23:58:26 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

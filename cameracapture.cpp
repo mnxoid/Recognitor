@@ -59,7 +59,7 @@ void CameraCapture::run()
             break;
         }
         emit CameraCapture::updatePic(frame);
-        cv::waitKey(20);
+        //cv::waitKey(20); - makes the app crash!
     }
     qDebug() << "Thread ended";
     if (cap) delete cap;

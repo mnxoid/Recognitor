@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>Recognitor: Текст програми Recognitor/userscreen.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Створено системою Doxygen 1.8.1.2 -->
+<!-- Створено системою Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </script>
@@ -93,38 +94,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;opencv2/highgui/highgui.hpp&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html" title="User window class.">UserScreen</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classUserScreen.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html" title="User window class.">UserScreen</a> : <span class="keyword">public</span> QMainWindow</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classUserScreen.html#a27136456b8f1b4d10dfe1cbfc9c43d7c" title="UserScreen constructor.">UserScreen</a>(QWidget *parent = 0);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classUserScreen.html#a30ef13619f5f42c72064ccd57df79e82" title="UserScreen destructor.">~UserScreen</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a89419eeb0d30311360c816f2a29355df" title="Unexpected end of capturing handler.">respond</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a960593e46a29dde2ebecde6bced1eaf9" title="Camera stream receiver.">imShow</a>(cv::Mat m);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e25c29ff53726317f4056b66fcb9a18" title="Exit button click handler.">on_pushButton_2_clicked</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e79ba614aa7a1af1520cc78d5e7c264" title="Start button click handler.">on_pushButton_clicked</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8">   64</a></span>&#160;    <a class="code" href="classUi_1_1UserScreen.html">Ui::UserScreen</a> *<a class="code" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8" title="User interface reference.">ui</a>; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif // USERSCREEN_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html">UserScreen</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classUserScreen.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUserScreen.html">UserScreen</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classUserScreen.html#a27136456b8f1b4d10dfe1cbfc9c43d7c">UserScreen</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classUserScreen.html#a30ef13619f5f42c72064ccd57df79e82">~UserScreen</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a89419eeb0d30311360c816f2a29355df">respond</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a960593e46a29dde2ebecde6bced1eaf9">imShow</a>(cv::Mat m);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#af92e7e10b2690fe83a4f97f93ef1f910">sendPic</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e25c29ff53726317f4056b66fcb9a18">on_pushButton_2_clicked</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6e79ba614aa7a1af1520cc78d5e7c264">on_pushButton_clicked</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a427fbc50935a1e53f000c987f08ab2e2">captureStop</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;signals:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUserScreen.html#a6924ceec14a418da6b570949bca8523f">stopCap</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8">   76</a></span>&#160;    <a class="code" href="classUi_1_1UserScreen.html">Ui::UserScreen</a> *<a class="code" href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8">ui</a>; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classUserScreen.html#a36d9ae5cffae28edb5dcaededdacea9e">   77</a></span>&#160;    QTimer* <a class="code" href="classUserScreen.html#a36d9ae5cffae28edb5dcaededdacea9e">t</a>;          </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif // USERSCREEN_H</span></div>
+<div class="ttc" id="classUserScreen_html_ade24b1857f428a1a247fd622a51c8de8"><div class="ttname"><a href="classUserScreen.html#ade24b1857f428a1a247fd622a51c8de8">UserScreen::ui</a></div><div class="ttdeci">Ui::UserScreen * ui</div><div class="ttdoc">User interface reference. </div><div class="ttdef"><b>Definition:</b> userscreen.h:76</div></div>
+<div class="ttc" id="classUserScreen_html_a89419eeb0d30311360c816f2a29355df"><div class="ttname"><a href="classUserScreen.html#a89419eeb0d30311360c816f2a29355df">UserScreen::respond</a></div><div class="ttdeci">void respond()</div><div class="ttdoc">Unexpected end of capturing handler. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:92</div></div>
+<div class="ttc" id="classUserScreen_html_a6e25c29ff53726317f4056b66fcb9a18"><div class="ttname"><a href="classUserScreen.html#a6e25c29ff53726317f4056b66fcb9a18">UserScreen::on_pushButton_2_clicked</a></div><div class="ttdeci">void on_pushButton_2_clicked()</div><div class="ttdoc">Exit button click handler. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:59</div></div>
+<div class="ttc" id="classUserScreen_html_a6924ceec14a418da6b570949bca8523f"><div class="ttname"><a href="classUserScreen.html#a6924ceec14a418da6b570949bca8523f">UserScreen::stopCap</a></div><div class="ttdeci">void stopCap()</div><div class="ttdoc">Capture stopper. </div><div class="ttdef"><b>Definition:</b> moc_userscreen.cpp:151</div></div>
+<div class="ttc" id="classUserScreen_html_a6e79ba614aa7a1af1520cc78d5e7c264"><div class="ttname"><a href="classUserScreen.html#a6e79ba614aa7a1af1520cc78d5e7c264">UserScreen::on_pushButton_clicked</a></div><div class="ttdeci">void on_pushButton_clicked()</div><div class="ttdoc">Start button click handler. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:69</div></div>
+<div class="ttc" id="classUserScreen_html"><div class="ttname"><a href="classUserScreen.html">UserScreen</a></div><div class="ttdoc">User window class. </div><div class="ttdef"><b>Definition:</b> userscreen.h:28</div></div>
+<div class="ttc" id="classUserScreen_html_a427fbc50935a1e53f000c987f08ab2e2"><div class="ttname"><a href="classUserScreen.html#a427fbc50935a1e53f000c987f08ab2e2">UserScreen::captureStop</a></div><div class="ttdeci">void captureStop()</div><div class="ttdoc">Capture stopping handler. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:113</div></div>
+<div class="ttc" id="classUserScreen_html_a27136456b8f1b4d10dfe1cbfc9c43d7c"><div class="ttname"><a href="classUserScreen.html#a27136456b8f1b4d10dfe1cbfc9c43d7c">UserScreen::UserScreen</a></div><div class="ttdeci">UserScreen(QWidget *parent=0)</div><div class="ttdoc">UserScreen constructor. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:41</div></div>
+<div class="ttc" id="classUi_1_1UserScreen_html"><div class="ttname"><a href="classUi_1_1UserScreen.html">Ui::UserScreen</a></div><div class="ttdef"><b>Definition:</b> ui_userscreen.h:301</div></div>
+<div class="ttc" id="classUserScreen_html_a30ef13619f5f42c72064ccd57df79e82"><div class="ttname"><a href="classUserScreen.html#a30ef13619f5f42c72064ccd57df79e82">UserScreen::~UserScreen</a></div><div class="ttdeci">~UserScreen()</div><div class="ttdoc">UserScreen destructor. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:52</div></div>
+<div class="ttc" id="classUserScreen_html_a36d9ae5cffae28edb5dcaededdacea9e"><div class="ttname"><a href="classUserScreen.html#a36d9ae5cffae28edb5dcaededdacea9e">UserScreen::t</a></div><div class="ttdeci">QTimer * t</div><div class="ttdoc">Timer instance. </div><div class="ttdef"><b>Definition:</b> userscreen.h:77</div></div>
+<div class="ttc" id="classUserScreen_html_af92e7e10b2690fe83a4f97f93ef1f910"><div class="ttname"><a href="classUserScreen.html#af92e7e10b2690fe83a4f97f93ef1f910">UserScreen::sendPic</a></div><div class="ttdeci">void sendPic()</div><div class="ttdoc">Sender. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:134</div></div>
+<div class="ttc" id="classUserScreen_html_a960593e46a29dde2ebecde6bced1eaf9"><div class="ttname"><a href="classUserScreen.html#a960593e46a29dde2ebecde6bced1eaf9">UserScreen::imShow</a></div><div class="ttdeci">void imShow(cv::Mat m)</div><div class="ttdoc">Camera stream receiver. </div><div class="ttdef"><b>Definition:</b> userscreen.cpp:99</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Mon Jul 14 2014 01:38:01 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Вівторок, 22 липня 2014 23:58:26 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

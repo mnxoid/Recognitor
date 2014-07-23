@@ -10,6 +10,12 @@ A class for Client-\/\-Server communication.
 
 {\ttfamily \#include $<$packet.\-h$>$}
 
+Схема успадкувань для Packet\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPacket}
+\end{center}
+\end{figure}
 \subsection*{Загальнодоступні елементи}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,9 +27,12 @@ A class for Client-\/\-Server communication.
 \begin{DoxyCompactList}\small\item\em Copy \hyperlink{classPacket}{Packet} constructor. \end{DoxyCompactList}\item 
 \hyperlink{classPacket_a3b5e228aeb6b3b4988f69433a9ccfb57}{Packet} (\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} \hyperlink{classPacket_a1e3e5174c14d3fa58d84e3449fbc8528}{R\-E\-Q\-U\-E\-S\-T\-\_\-\-I\-D}, int \hyperlink{classPacket_ab961c50e0041597c29c52d1e397c5f91}{S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D}, int \hyperlink{classPacket_a095ff3c0e41af547f0f7cc2464b0cb87}{S\-I\-Z\-E}, char $\ast$\hyperlink{classPacket_abc0a29f961bdd40de882e39601884866}{D\-A\-T\-A})
 \begin{DoxyCompactList}\small\item\em Full-\/parameter \hyperlink{classPacket}{Packet} constructor. \end{DoxyCompactList}\item 
+\hypertarget{classPacket_a48938391fb7e07460bb0e01198ae5ede}{\hyperlink{classPacket_a48938391fb7e07460bb0e01198ae5ede}{$\sim$\-Packet} ()}\label{classPacket_a48938391fb7e07460bb0e01198ae5ede}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPacket}{Packet} destructor. \end{DoxyCompactList}\item 
 Q\-Byte\-Array \hyperlink{classPacket_a0a267f964f5d9bf71159103eda50fbec}{get\-Bytes} ()
 \begin{DoxyCompactList}\small\item\em Raw packet getter. \end{DoxyCompactList}\item 
-\hyperlink{classPacket}{Packet} \hyperlink{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}{send} (Q\-String I\-P, int port)
+\hyperlink{classPacket}{Packet} $\ast$ \hyperlink{classPacket_a080da7da8230c7bec49d2bd5817cd14d}{send} (Q\-String I\-P, int port)
 \begin{DoxyCompactList}\small\item\em Communication function. \end{DoxyCompactList}\item 
 \hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} \hyperlink{classPacket_aa1e7e204d2ba664112050246d11bb86c}{get\-Request\-I\-D} ()
 \begin{DoxyCompactList}\small\item\em Request I\-D getter. \end{DoxyCompactList}\item 
@@ -32,7 +41,9 @@ int \hyperlink{classPacket_a65b04ece5e53c1de54ee9315b7ff4a07}{get\-Session\-I\-D
 int \hyperlink{classPacket_abb2c4b6aeb0254214210ae9542574609}{get\-Data\-Size} ()
 \begin{DoxyCompactList}\small\item\em Raw data size getter. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{classPacket_ac4dc8bfb2c1839018b5a2a4ddf815fdb}{raw\-Data} ()
-\begin{DoxyCompactList}\small\item\em Raw data getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Raw data getter. \end{DoxyCompactList}\item 
+bool \hyperlink{classPacket_a2c9a8531b4e1b30f22cde839b4b66744}{validate} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPacket}{Packet} validator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Приватні дані}
 \begin{DoxyCompactItemize}
 \item 
@@ -155,14 +166,14 @@ Raw data getter.
 \begin{DoxyReturn}{Повертає}
 char$\ast$ -\/ Raw data 
 \end{DoxyReturn}
-\hypertarget{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}{\index{Packet@{Packet}!send@{send}}
+\hypertarget{classPacket_a080da7da8230c7bec49d2bd5817cd14d}{\index{Packet@{Packet}!send@{send}}
 \index{send@{send}!Packet@{Packet}}
-\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Packet} Packet\-::send (
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Packet} $\ast$ Packet\-::send (
 \begin{DoxyParamCaption}
 \item[{Q\-String}]{I\-P, }
 \item[{int}]{port}
 \end{DoxyParamCaption}
-)}}\label{classPacket_aeca5b2428ba736a24fe08c7322b74bb0}
+)}}\label{classPacket_a080da7da8230c7bec49d2bd5817cd14d}
 
 
 Communication function. 
@@ -176,6 +187,20 @@ Communication function.
 \end{DoxyParams}
 \begin{DoxyReturn}{Повертає}
 \hyperlink{classPacket}{Packet} -\/ server response 
+\end{DoxyReturn}
+\hypertarget{classPacket_a2c9a8531b4e1b30f22cde839b4b66744}{\index{Packet@{Packet}!validate@{validate}}
+\index{validate@{validate}!Packet@{Packet}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}bool Packet\-::validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPacket_a2c9a8531b4e1b30f22cde839b4b66744}
+
+
+\hyperlink{classPacket}{Packet} validator. 
+
+\begin{DoxyReturn}{Повертає}
+bool -\/ result 
 \end{DoxyReturn}
 
 

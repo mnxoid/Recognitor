@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>Recognitor: Текст програми Recognitor/exuserscreen.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Створено системою Doxygen 1.8.1.2 -->
+<!-- Створено системою Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </script>
@@ -93,39 +94,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;opencv2/highgui/highgui.hpp&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="classExUserScreen.html" title="Extended User window class.">ExUserScreen</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classExUserScreen.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classExUserScreen.html" title="Extended User window class.">ExUserScreen</a> : <span class="keyword">public</span> QMainWindow</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classExUserScreen.html#a8642db4f09c4528daf7e22ce2dcc1b47" title="ExUserScreen constructor.">ExUserScreen</a>(QWidget *parent = 0);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classExUserScreen.html#a61421cd56bb9b54501c4cb34d297891f" title="ExUserScreen destructor.">~ExUserScreen</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a02023bde7f3823dbeb460fddcef8341e" title="Unexpected end of capturing handler.">respond</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#ad479165ffd920e5ef152e5aff1ed4d6b" title="Camera stream receiver.">imShow</a>(cv::Mat m);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a30a26ad349a33bac86a0848934c55655" title="Exit button click handler.">on_pushButton_2_clicked</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a4c7d4f567fc5d87bf459c4fe9ae09411" title="Start button click handler.">on_pushButton_clicked</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="classExUserScreen.html">ExUserScreen</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classExUserScreen.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classExUserScreen.html">ExUserScreen</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classExUserScreen.html#a8642db4f09c4528daf7e22ce2dcc1b47">ExUserScreen</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classExUserScreen.html#a61421cd56bb9b54501c4cb34d297891f">~ExUserScreen</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a02023bde7f3823dbeb460fddcef8341e">respond</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#ad479165ffd920e5ef152e5aff1ed4d6b">imShow</a>(cv::Mat m);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a0c6af1cd09fc3301f9195f162d417c85">sendPic</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a30a26ad349a33bac86a0848934c55655">on_pushButton_2_clicked</a>();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#ad5eeeac687e031eb0b722957b20191cf" title="Manage Goods button click handler.">on_pushButton_3_clicked</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a4c7d4f567fc5d87bf459c4fe9ae09411">on_pushButton_clicked</a>();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="classExUserScreen.html#abed6a95638d506058d3b1e6e69a42788">   68</a></span>&#160;    <a class="code" href="classUi_1_1ExUserScreen.html">Ui::ExUserScreen</a> *<a class="code" href="classExUserScreen.html#abed6a95638d506058d3b1e6e69a42788" title="User interface reference.">ui</a>; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif // EXUSERSCREEN_H</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#ad5eeeac687e031eb0b722957b20191cf">on_pushButton_3_clicked</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#a10553577fa37a875152edf092a1caf51">captureStop</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;signals:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classExUserScreen.html#ad4ebe68d01c167f183a7a9ef2aa06185">stopCap</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classExUserScreen.html#abed6a95638d506058d3b1e6e69a42788">   81</a></span>&#160;    <a class="code" href="classUi_1_1ExUserScreen.html">Ui::ExUserScreen</a> *<a class="code" href="classExUserScreen.html#abed6a95638d506058d3b1e6e69a42788">ui</a>; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classExUserScreen.html#acd312e641954e0a6a822e3fe53f3a7af">   82</a></span>&#160;    QTimer* <a class="code" href="classExUserScreen.html#acd312e641954e0a6a822e3fe53f3a7af">t</a>;          </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif // EXUSERSCREEN_H</span></div>
+<div class="ttc" id="classExUserScreen_html_a8642db4f09c4528daf7e22ce2dcc1b47"><div class="ttname"><a href="classExUserScreen.html#a8642db4f09c4528daf7e22ce2dcc1b47">ExUserScreen::ExUserScreen</a></div><div class="ttdeci">ExUserScreen(QWidget *parent=0)</div><div class="ttdoc">ExUserScreen constructor. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:39</div></div>
+<div class="ttc" id="classExUserScreen_html_a4c7d4f567fc5d87bf459c4fe9ae09411"><div class="ttname"><a href="classExUserScreen.html#a4c7d4f567fc5d87bf459c4fe9ae09411">ExUserScreen::on_pushButton_clicked</a></div><div class="ttdeci">void on_pushButton_clicked()</div><div class="ttdoc">Start button click handler. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:66</div></div>
+<div class="ttc" id="classExUserScreen_html_ad4ebe68d01c167f183a7a9ef2aa06185"><div class="ttname"><a href="classExUserScreen.html#ad4ebe68d01c167f183a7a9ef2aa06185">ExUserScreen::stopCap</a></div><div class="ttdeci">void stopCap()</div><div class="ttdoc">Capture stopper. </div><div class="ttdef"><b>Definition:</b> moc_exuserscreen.cpp:156</div></div>
+<div class="ttc" id="classExUserScreen_html_abed6a95638d506058d3b1e6e69a42788"><div class="ttname"><a href="classExUserScreen.html#abed6a95638d506058d3b1e6e69a42788">ExUserScreen::ui</a></div><div class="ttdeci">Ui::ExUserScreen * ui</div><div class="ttdoc">User interface reference. </div><div class="ttdef"><b>Definition:</b> exuserscreen.h:81</div></div>
+<div class="ttc" id="classExUserScreen_html"><div class="ttname"><a href="classExUserScreen.html">ExUserScreen</a></div><div class="ttdoc">Extended User window class. </div><div class="ttdef"><b>Definition:</b> exuserscreen.h:28</div></div>
+<div class="ttc" id="classExUserScreen_html_ad5eeeac687e031eb0b722957b20191cf"><div class="ttname"><a href="classExUserScreen.html#ad5eeeac687e031eb0b722957b20191cf">ExUserScreen::on_pushButton_3_clicked</a></div><div class="ttdeci">void on_pushButton_3_clicked()</div><div class="ttdoc">Manage Goods button click handler. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:89</div></div>
+<div class="ttc" id="classExUserScreen_html_ad479165ffd920e5ef152e5aff1ed4d6b"><div class="ttname"><a href="classExUserScreen.html#ad479165ffd920e5ef152e5aff1ed4d6b">ExUserScreen::imShow</a></div><div class="ttdeci">void imShow(cv::Mat m)</div><div class="ttdoc">Camera stream receiver. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:105</div></div>
+<div class="ttc" id="classExUserScreen_html_a30a26ad349a33bac86a0848934c55655"><div class="ttname"><a href="classExUserScreen.html#a30a26ad349a33bac86a0848934c55655">ExUserScreen::on_pushButton_2_clicked</a></div><div class="ttdeci">void on_pushButton_2_clicked()</div><div class="ttdoc">Exit button click handler. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:57</div></div>
+<div class="ttc" id="classExUserScreen_html_a02023bde7f3823dbeb460fddcef8341e"><div class="ttname"><a href="classExUserScreen.html#a02023bde7f3823dbeb460fddcef8341e">ExUserScreen::respond</a></div><div class="ttdeci">void respond()</div><div class="ttdoc">Unexpected end of capturing handler. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:98</div></div>
+<div class="ttc" id="classUi_1_1ExUserScreen_html"><div class="ttname"><a href="classUi_1_1ExUserScreen.html">Ui::ExUserScreen</a></div><div class="ttdef"><b>Definition:</b> ui_exuserscreen.h:188</div></div>
+<div class="ttc" id="classExUserScreen_html_acd312e641954e0a6a822e3fe53f3a7af"><div class="ttname"><a href="classExUserScreen.html#acd312e641954e0a6a822e3fe53f3a7af">ExUserScreen::t</a></div><div class="ttdeci">QTimer * t</div><div class="ttdoc">Timer instance. </div><div class="ttdef"><b>Definition:</b> exuserscreen.h:82</div></div>
+<div class="ttc" id="classExUserScreen_html_a61421cd56bb9b54501c4cb34d297891f"><div class="ttname"><a href="classExUserScreen.html#a61421cd56bb9b54501c4cb34d297891f">ExUserScreen::~ExUserScreen</a></div><div class="ttdeci">~ExUserScreen()</div><div class="ttdoc">ExUserScreen destructor. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:50</div></div>
+<div class="ttc" id="classExUserScreen_html_a0c6af1cd09fc3301f9195f162d417c85"><div class="ttname"><a href="classExUserScreen.html#a0c6af1cd09fc3301f9195f162d417c85">ExUserScreen::sendPic</a></div><div class="ttdeci">void sendPic()</div><div class="ttdoc">Sender. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:136</div></div>
+<div class="ttc" id="classExUserScreen_html_a10553577fa37a875152edf092a1caf51"><div class="ttname"><a href="classExUserScreen.html#a10553577fa37a875152edf092a1caf51">ExUserScreen::captureStop</a></div><div class="ttdeci">void captureStop()</div><div class="ttdoc">Capture stopping handler. </div><div class="ttdef"><b>Definition:</b> exuserscreen.cpp:117</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Mon Jul 14 2014 01:38:01 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Вівторок, 22 липня 2014 23:58:26 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

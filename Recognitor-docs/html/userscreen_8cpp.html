@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>Recognitor: Файл Recognitor/userscreen.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -30,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Створено системою Doxygen 1.8.1.2 -->
+<!-- Створено системою Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 </script>
@@ -98,23 +99,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Пошук');
 <code>#include &lt;opencv2/highgui/highgui.hpp&gt;</code><br/>
 <code>#include &quot;<a class="el" href="cameracapture_8h_source.html">cameracapture.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="cvtoqt_8h_source.html">cvtoqt.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="packet_8h_source.html">packet.h</a>&quot;</code><br/>
+<code>#include &lt;QTimer&gt;</code><br/>
+<code>#include &lt;QPainter&gt;</code><br/>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Змінні</h2></td></tr>
 <tr class="memitem:add53acba88e1ae4f2143baff6786f953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add53acba88e1ae4f2143baff6786f953"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userscreen_8cpp.html#add53acba88e1ae4f2143baff6786f953">isCapturing</a></td></tr>
 <tr class="memdesc:add53acba88e1ae4f2143baff6786f953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines, whether capturing session is active. <br/></td></tr>
+<tr class="separator:add53acba88e1ae4f2143baff6786f953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3399d04c16cf0fde5d6280bd3abd803"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userscreen_8cpp.html#aa3399d04c16cf0fde5d6280bd3abd803">session</a></td></tr>
+<tr class="memdesc:aa3399d04c16cf0fde5d6280bd3abd803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Session ID.  <a href="#aa3399d04c16cf0fde5d6280bd3abd803">Детальніше...</a><br/></td></tr>
+<tr class="separator:aa3399d04c16cf0fde5d6280bd3abd803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a398def1a3b87c400e0a053b875bf4d93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindowManager.html">WindowManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userscreen_8cpp.html#a398def1a3b87c400e0a053b875bf4d93">WMgr</a></td></tr>
-<tr class="memdesc:a398def1a3b87c400e0a053b875bf4d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window Manager instance.  <a href="#a398def1a3b87c400e0a053b875bf4d93"></a><br/></td></tr>
+<tr class="memdesc:a398def1a3b87c400e0a053b875bf4d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window Manager instance.  <a href="#a398def1a3b87c400e0a053b875bf4d93">Детальніше...</a><br/></td></tr>
+<tr class="separator:a398def1a3b87c400e0a053b875bf4d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55ac8a828f46a342155dc9da52187524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCameraCapture.html">CameraCapture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userscreen_8cpp.html#a55ac8a828f46a342155dc9da52187524">cc</a></td></tr>
-<tr class="memdesc:a55ac8a828f46a342155dc9da52187524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera capture instance.  <a href="#a55ac8a828f46a342155dc9da52187524"></a><br/></td></tr>
+<tr class="memdesc:a55ac8a828f46a342155dc9da52187524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera capture instance.  <a href="#a55ac8a828f46a342155dc9da52187524">Детальніше...</a><br/></td></tr>
+<tr class="separator:a55ac8a828f46a342155dc9da52187524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2>Детальний опис</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
 <div class="textblock"><p>User window implementation. </p>
 <dl class="section author"><dt>Автор</dt><dd>mnxoid</dd></dl>
 <p>Copyright 2014 by mnxoid,</p>
 <p>This software is the confidential and proprietary information of mnxoid ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in accordance with the terms of the license agreement you entered into with mnxoid. </p>
-</div><h2>Опис змінних</h2>
+</div><h2 class="groupheader">Опис змінних</h2>
 <a class="anchor" id="a55ac8a828f46a342155dc9da52187524"></a>
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +136,24 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="users
 </div><div class="memdoc">
 
 <p>Camera capture instance. </p>
-<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="classCameraCapture.html" title="A class for capturing frames from the camera.">CameraCapture</a> </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="classCameraCapture.html" title="A class for capturing frames from the camera. ">CameraCapture</a></dd></dl>
+<p>Camera capture instance. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa3399d04c16cf0fde5d6280bd3abd803"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int session</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Session ID. </p>
+<p>Session ID.</p>
+<p>Current SESSION_ID. </p>
 
 </div>
 </div>
@@ -141,16 +168,17 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="users
 </div><div class="memdoc">
 
 <p>Window Manager instance. </p>
-<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="main_8cpp.html" title="Main source file.">main.cpp</a> </dd></dl>
+<dl class="section see"><dt>Див. також</dt><dd><a class="el" href="main_8cpp.html" title="Main source file. ">main.cpp</a></dd></dl>
+<p>Window Manager instance. </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документація до Recognitor створена Mon Jul 14 2014 01:38:01 системою &#160;<a href="http://www.doxygen.org/index.html">
+Документація до Recognitor створена Вівторок, 22 липня 2014 23:58:26 системою &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

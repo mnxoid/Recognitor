@@ -16,9 +16,13 @@ class \hyperlink{classPacket}{Packet}
 \subsection*{Переліки}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} \{ \hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a8b22fbb60fcbd7a4a5e1e6ff6ee38218}{A\-U\-T\-H}, 
+enum \hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3}{R\-Q\-T\-Y\-P\-E} \{ \\*
+\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a8b22fbb60fcbd7a4a5e1e6ff6ee38218}{A\-U\-T\-H}, 
+\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a5f5796f2798babbfa643f791b4cfbaeb}{P\-I\-C\-\_\-\-S\-E\-N\-D}, 
 \hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a8f3bdca6f4cd81fa46a4e0adfbf14445}{R\-E\-S\-P\-\_\-\-O\-K}, 
 \hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3aa442e1876eb255ac7668208ef4678b7e}{R\-E\-S\-P\-\_\-\-E\-R\-R}, 
+\\*
+\hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a0913927954acd375db01128839f775f7}{I\-N\-T\-\_\-\-E\-R\-R}, 
 \hyperlink{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a2f0d18fc0d0fa4a6cd92dc328501874d}{E\-M\-P\-T\-Y}
  \}
 \begin{DoxyCompactList}\small\item\em Enumeration with types of requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -41,16 +45,19 @@ This software is the confidential and proprietary information of mnxoid (\char`\
 Enumeration with types of requests. 
 
 \begin{Desc}
-\item[Елементи переліків\-: ]\par
+\item[Елементи переліків]\par
 \begin{description}
 \index{A\-U\-T\-H@{A\-U\-T\-H}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!A\-U\-T\-H@{A\-U\-T\-H}}\item[{\em 
 \hypertarget{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a8b22fbb60fcbd7a4a5e1e6ff6ee38218}{A\-U\-T\-H}\label{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a8b22fbb60fcbd7a4a5e1e6ff6ee38218}
-}]Authentication. \index{R\-E\-S\-P\-\_\-\-O\-K@{R\-E\-S\-P\-\_\-\-O\-K}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!R\-E\-S\-P\-\_\-\-O\-K@{R\-E\-S\-P\-\_\-\-O\-K}}\item[{\em 
+}]Authentication. \index{P\-I\-C\-\_\-\-S\-E\-N\-D@{P\-I\-C\-\_\-\-S\-E\-N\-D}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!P\-I\-C\-\_\-\-S\-E\-N\-D@{P\-I\-C\-\_\-\-S\-E\-N\-D}}\item[{\em 
+\hypertarget{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a5f5796f2798babbfa643f791b4cfbaeb}{P\-I\-C\-\_\-\-S\-E\-N\-D}\label{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a5f5796f2798babbfa643f791b4cfbaeb}
+}]Sending picture. \index{R\-E\-S\-P\-\_\-\-O\-K@{R\-E\-S\-P\-\_\-\-O\-K}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!R\-E\-S\-P\-\_\-\-O\-K@{R\-E\-S\-P\-\_\-\-O\-K}}\item[{\em 
 \hypertarget{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a8f3bdca6f4cd81fa46a4e0adfbf14445}{R\-E\-S\-P\-\_\-\-O\-K}\label{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a8f3bdca6f4cd81fa46a4e0adfbf14445}
 }]Good server response. \index{R\-E\-S\-P\-\_\-\-E\-R\-R@{R\-E\-S\-P\-\_\-\-E\-R\-R}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!R\-E\-S\-P\-\_\-\-E\-R\-R@{R\-E\-S\-P\-\_\-\-E\-R\-R}}\item[{\em 
 \hypertarget{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3aa442e1876eb255ac7668208ef4678b7e}{R\-E\-S\-P\-\_\-\-E\-R\-R}\label{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3aa442e1876eb255ac7668208ef4678b7e}
-}]Bad server response. \index{E\-M\-P\-T\-Y@{E\-M\-P\-T\-Y}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!E\-M\-P\-T\-Y@{E\-M\-P\-T\-Y}}\item[{\em 
+}]Bad server response. \index{I\-N\-T\-\_\-\-E\-R\-R@{I\-N\-T\-\_\-\-E\-R\-R}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!I\-N\-T\-\_\-\-E\-R\-R@{I\-N\-T\-\_\-\-E\-R\-R}}\item[{\em 
+\hypertarget{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a0913927954acd375db01128839f775f7}{I\-N\-T\-\_\-\-E\-R\-R}\label{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a0913927954acd375db01128839f775f7}
+}]Internal error. \index{E\-M\-P\-T\-Y@{E\-M\-P\-T\-Y}!packet.\-h@{packet.\-h}}\index{packet.\-h@{packet.\-h}!E\-M\-P\-T\-Y@{E\-M\-P\-T\-Y}}\item[{\em 
 \hypertarget{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a2f0d18fc0d0fa4a6cd92dc328501874d}{E\-M\-P\-T\-Y}\label{packet_8h_a15e96d9e79cfa4c3aaba6861be4707e3a2f0d18fc0d0fa4a6cd92dc328501874d}
 }]No request. \end{description}
 \end{Desc}
-

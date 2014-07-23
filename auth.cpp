@@ -41,7 +41,9 @@ Access Check(QString login, QString pwd)
 //        session = resp.getSessionID();
 //        data = resp.rawData();
 //        Access a = *((Access*)data);
+         // QList
 //        return a;
+        free(data);
         if (login == "Admin") {
             return ADMIN;
         } else if (login == "ExUser") {

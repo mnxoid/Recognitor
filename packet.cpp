@@ -25,6 +25,14 @@ Packet::Packet()
     DATA = NULL;
 }
 /**
+ * @brief       Packet destructor
+ **/
+Packet::~Packet()
+{
+    if (DATA) free(DATA);
+}
+
+/**
  * @brief       Copy Packet constructor
  **/
 Packet::Packet(Packet &p) : QTcpServer()

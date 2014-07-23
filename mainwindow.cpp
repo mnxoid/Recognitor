@@ -18,6 +18,7 @@
 #include "windowmanager.h"
 #include <QMessageBox>
 #include "keyenterreceiver.h"
+keyEnterReceiver *key; //!< Enter key receiver (extracted for the sake of memory management)
 /**
  * @brief       Window Manager instance
  * @see         main.cpp
@@ -32,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    keyEnterReceiver *key = new keyEnterReceiver();
+    key = new keyEnterReceiver();
     connect(key, SIGNAL(enterPressed()), this, SLOT(on_pushButton_clicked()));
     this->installEventFilter(key);
 }
@@ -41,6 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
  **/
 MainWindow::~MainWindow()
 {
+    delete key;
     delete ui;
 }
 /**

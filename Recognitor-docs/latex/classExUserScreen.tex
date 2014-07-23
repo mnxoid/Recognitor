@@ -10,6 +10,12 @@ Extended User window class.
 
 {\ttfamily \#include $<$exuserscreen.\-h$>$}
 
+Схема успадкувань для Ex\-User\-Screen\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExUserScreen}
+\end{center}
+\end{figure}
 \subsection*{Загальнодоступні слоти}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,7 +24,16 @@ Extended User window class.
 \begin{DoxyCompactList}\small\item\em Unexpected end of capturing handler. \end{DoxyCompactList}\item 
 \hypertarget{classExUserScreen_ad479165ffd920e5ef152e5aff1ed4d6b}{void \hyperlink{classExUserScreen_ad479165ffd920e5ef152e5aff1ed4d6b}{im\-Show} (cv\-::\-Mat m)}\label{classExUserScreen_ad479165ffd920e5ef152e5aff1ed4d6b}
 
-\begin{DoxyCompactList}\small\item\em Camera stream receiver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Camera stream receiver. \end{DoxyCompactList}\item 
+\hypertarget{classExUserScreen_a0c6af1cd09fc3301f9195f162d417c85}{void \hyperlink{classExUserScreen_a0c6af1cd09fc3301f9195f162d417c85}{send\-Pic} ()}\label{classExUserScreen_a0c6af1cd09fc3301f9195f162d417c85}
+
+\begin{DoxyCompactList}\small\item\em Sender. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Сигнали}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classExUserScreen_ad4ebe68d01c167f183a7a9ef2aa06185}{void \hyperlink{classExUserScreen_ad4ebe68d01c167f183a7a9ef2aa06185}{stop\-Cap} ()}\label{classExUserScreen_ad4ebe68d01c167f183a7a9ef2aa06185}
+
+\begin{DoxyCompactList}\small\item\em Capture stopper. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Загальнодоступні елементи}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,13 +53,19 @@ Extended User window class.
 \begin{DoxyCompactList}\small\item\em Start button click handler. \end{DoxyCompactList}\item 
 \hypertarget{classExUserScreen_ad5eeeac687e031eb0b722957b20191cf}{void \hyperlink{classExUserScreen_ad5eeeac687e031eb0b722957b20191cf}{on\-\_\-push\-Button\-\_\-3\-\_\-clicked} ()}\label{classExUserScreen_ad5eeeac687e031eb0b722957b20191cf}
 
-\begin{DoxyCompactList}\small\item\em Manage Goods button click handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Manage Goods button click handler. \end{DoxyCompactList}\item 
+\hypertarget{classExUserScreen_a10553577fa37a875152edf092a1caf51}{void \hyperlink{classExUserScreen_a10553577fa37a875152edf092a1caf51}{capture\-Stop} ()}\label{classExUserScreen_a10553577fa37a875152edf092a1caf51}
+
+\begin{DoxyCompactList}\small\item\em Capture stopping handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Приватні дані}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{classExUserScreen_abed6a95638d506058d3b1e6e69a42788}{\hyperlink{classUi_1_1ExUserScreen}{Ui\-::\-Ex\-User\-Screen} $\ast$ \hyperlink{classExUserScreen_abed6a95638d506058d3b1e6e69a42788}{ui}}\label{classExUserScreen_abed6a95638d506058d3b1e6e69a42788}
 
-\begin{DoxyCompactList}\small\item\em User interface reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em User interface reference. \end{DoxyCompactList}\item 
+\hypertarget{classExUserScreen_acd312e641954e0a6a822e3fe53f3a7af}{Q\-Timer $\ast$ \hyperlink{classExUserScreen_acd312e641954e0a6a822e3fe53f3a7af}{t}}\label{classExUserScreen_acd312e641954e0a6a822e3fe53f3a7af}
+
+\begin{DoxyCompactList}\small\item\em Timer instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Детальний опис}
@@ -72,4 +93,5 @@ Extended User window class.
 Документація цих класів була створена з файлів\-:\begin{DoxyCompactItemize}
 \item 
 Recognitor/\hyperlink{exuserscreen_8h}{exuserscreen.\-h}\item 
-Recognitor/\hyperlink{exuserscreen_8cpp}{exuserscreen.\-cpp}\end{DoxyCompactItemize}
+Recognitor/\hyperlink{exuserscreen_8cpp}{exuserscreen.\-cpp}\item 
+Recognitor/moc\-\_\-exuserscreen.\-cpp\end{DoxyCompactItemize}

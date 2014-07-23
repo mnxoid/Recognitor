@@ -10,6 +10,12 @@ User window class.
 
 {\ttfamily \#include $<$userscreen.\-h$>$}
 
+Схема успадкувань для User\-Screen\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUserScreen}
+\end{center}
+\end{figure}
 \subsection*{Загальнодоступні слоти}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,7 +24,16 @@ User window class.
 \begin{DoxyCompactList}\small\item\em Unexpected end of capturing handler. \end{DoxyCompactList}\item 
 \hypertarget{classUserScreen_a960593e46a29dde2ebecde6bced1eaf9}{void \hyperlink{classUserScreen_a960593e46a29dde2ebecde6bced1eaf9}{im\-Show} (cv\-::\-Mat m)}\label{classUserScreen_a960593e46a29dde2ebecde6bced1eaf9}
 
-\begin{DoxyCompactList}\small\item\em Camera stream receiver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Camera stream receiver. \end{DoxyCompactList}\item 
+\hypertarget{classUserScreen_af92e7e10b2690fe83a4f97f93ef1f910}{void \hyperlink{classUserScreen_af92e7e10b2690fe83a4f97f93ef1f910}{send\-Pic} ()}\label{classUserScreen_af92e7e10b2690fe83a4f97f93ef1f910}
+
+\begin{DoxyCompactList}\small\item\em Sender. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Сигнали}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUserScreen_a6924ceec14a418da6b570949bca8523f}{void \hyperlink{classUserScreen_a6924ceec14a418da6b570949bca8523f}{stop\-Cap} ()}\label{classUserScreen_a6924ceec14a418da6b570949bca8523f}
+
+\begin{DoxyCompactList}\small\item\em Capture stopper. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Загальнодоступні елементи}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,13 +50,19 @@ User window class.
 \begin{DoxyCompactList}\small\item\em Exit button click handler. \end{DoxyCompactList}\item 
 \hypertarget{classUserScreen_a6e79ba614aa7a1af1520cc78d5e7c264}{void \hyperlink{classUserScreen_a6e79ba614aa7a1af1520cc78d5e7c264}{on\-\_\-push\-Button\-\_\-clicked} ()}\label{classUserScreen_a6e79ba614aa7a1af1520cc78d5e7c264}
 
-\begin{DoxyCompactList}\small\item\em Start button click handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Start button click handler. \end{DoxyCompactList}\item 
+\hypertarget{classUserScreen_a427fbc50935a1e53f000c987f08ab2e2}{void \hyperlink{classUserScreen_a427fbc50935a1e53f000c987f08ab2e2}{capture\-Stop} ()}\label{classUserScreen_a427fbc50935a1e53f000c987f08ab2e2}
+
+\begin{DoxyCompactList}\small\item\em Capture stopping handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Приватні дані}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{classUserScreen_ade24b1857f428a1a247fd622a51c8de8}{\hyperlink{classUi_1_1UserScreen}{Ui\-::\-User\-Screen} $\ast$ \hyperlink{classUserScreen_ade24b1857f428a1a247fd622a51c8de8}{ui}}\label{classUserScreen_ade24b1857f428a1a247fd622a51c8de8}
 
-\begin{DoxyCompactList}\small\item\em User interface reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em User interface reference. \end{DoxyCompactList}\item 
+\hypertarget{classUserScreen_a36d9ae5cffae28edb5dcaededdacea9e}{Q\-Timer $\ast$ \hyperlink{classUserScreen_a36d9ae5cffae28edb5dcaededdacea9e}{t}}\label{classUserScreen_a36d9ae5cffae28edb5dcaededdacea9e}
+
+\begin{DoxyCompactList}\small\item\em Timer instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Детальний опис}
@@ -69,4 +90,5 @@ User window class.
 Документація цих класів була створена з файлів\-:\begin{DoxyCompactItemize}
 \item 
 Recognitor/\hyperlink{userscreen_8h}{userscreen.\-h}\item 
+Recognitor/moc\-\_\-userscreen.\-cpp\item 
 Recognitor/\hyperlink{userscreen_8cpp}{userscreen.\-cpp}\end{DoxyCompactItemize}

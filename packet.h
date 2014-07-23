@@ -55,6 +55,10 @@ public:
      **/
     Packet(RQTYPE REQUEST_ID, int SESSION_ID, int SIZE, char* DATA);
     /**
+     * @brief       Packet destructor
+     **/
+    ~Packet();
+    /**
      * @brief       Raw packet getter
      * @return      QByteArray - packet (ready to be sent)
      **/

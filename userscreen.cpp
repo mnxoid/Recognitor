@@ -20,6 +20,7 @@
 #include "cvtoqt.h"
 #include "packet.h"
 #include <QTimer>
+#include <QPainter>
 
 extern int isCapturing; //!< Determines, whether capturing session is active
 extern int session; //!< Session ID
@@ -101,13 +102,18 @@ void UserScreen::imShow(cv::Mat m)
     QPixmap px;
     px.convertFromImage(qm);
     QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
+    QPainter* paint = new QPainter(&scaledPixmap);
+    paint->drawRect(ui->horizontalSlider->value(),ui->horizontalSlider_2->value(),ui->horizontalSlider_3->value(),ui->horizontalSlider_4->value());
     ui->label_3->setPixmap( scaledPixmap);
+    delete paint;
 }
 /**
  * @brief       Capture stopping handler
  **/
 void UserScreen::captureStop()
 {
+    disconnect(this,SLOT(imShow(cv::Mat)));
+    disconnect(this,SLOT(sendPic()));
     if(isCapturing)
     {
         isCapturing = 0;
@@ -115,7 +121,7 @@ void UserScreen::captureStop()
         cc->End();
         delete cc;
     }
-    if(t)
+    if(t->isActive())
     {
         t->stop();
         delete t;
@@ -136,7 +142,8 @@ void UserScreen::sendPic()
         Packet* resp = p.send("127.0.0.1",1337);
         if (resp->getRequestID() != RESP_OK)
         {
-            qDebug() << "Error sending pic";
+            qDebug() << "Error sending pic: byte count = " << size;
         }
+        delete resp;
     }
 }
