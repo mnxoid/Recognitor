@@ -123,6 +123,7 @@ void UserScreen::captureStop()
         isCapturing = 0;
         ui->pushButton->setText("START");
         cc->terminate();
+        cc->wait();
         cc->End();
         delete cc;
     }
@@ -141,8 +142,9 @@ void UserScreen::sendPic()
     if(ui->label_3->pixmap())
     {
         char *d;
-        int size = ui->label_3->pixmap()->toImage().byteCount();
-        d = (char*)ui->label_3->pixmap()->toImage().bits();
+        QImage cut = ui->label_3->pixmap()->toImage().copy(ui->horizontalSlider_2->value(),ui->horizontalSlider_3->value(),ui->horizontalSlider_4->value(),ui->horizontalSlider->value());
+        int size = cut.byteCount();
+        d = (char*)cut.bits();
         Packet p(PIC_SEND, session, size, d);
         Packet* resp = p.send("127.0.0.1",1337);
         if (resp->getRequestID() != RESP_OK)

@@ -13,11 +13,15 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QVBoxLayout>
@@ -29,7 +33,8 @@ class Ui_ExUserScreen
 {
 public:
     QWidget *centralwidget;
-    QWidget *layoutWidget;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_5;
     QVBoxLayout *verticalLayout;
     QLabel *label_3;
     QHBoxLayout *horizontalLayout_3;
@@ -48,21 +53,41 @@ public:
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_2;
     QSpacerItem *horizontalSpacer_4;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *label_9;
+    QVBoxLayout *verticalLayout_2;
+    QComboBox *comboBox;
+    QSpacerItem *verticalSpacer;
+    QPushButton *pushButton_4;
+    QSpacerItem *verticalSpacer_2;
+    QFrame *line;
+    QLabel *label_4;
+    QGridLayout *gridLayout;
+    QLabel *label_5;
+    QLabel *label_6;
+    QSlider *horizontalSlider_2;
+    QLabel *label_7;
+    QLabel *label_8;
+    QSlider *horizontalSlider_4;
+    QSlider *horizontalSlider;
+    QSlider *horizontalSlider_3;
 
     void setupUi(QMainWindow *ExUserScreen)
     {
         if (ExUserScreen->objectName().isEmpty())
             ExUserScreen->setObjectName(QStringLiteral("ExUserScreen"));
-        ExUserScreen->resize(639, 385);
+        ExUserScreen->resize(896, 394);
         centralwidget = new QWidget(ExUserScreen);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 11, 621, 361));
-        verticalLayout = new QVBoxLayout(layoutWidget);
+        widget = new QWidget(centralwidget);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(10, 10, 881, 381));
+        horizontalLayout_5 = new QHBoxLayout(widget);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(layoutWidget);
+        label_3 = new QLabel(widget);
         label_3->setObjectName(QStringLiteral("label_3"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -81,7 +106,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_2);
 
-        pushButton = new QPushButton(layoutWidget);
+        pushButton = new QPushButton(widget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setEnabled(true);
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
@@ -101,13 +126,13 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        label = new QLabel(layoutWidget);
+        label = new QLabel(widget);
         label->setObjectName(QStringLiteral("label"));
         label->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_4->addWidget(label);
 
-        spinBox = new QSpinBox(layoutWidget);
+        spinBox = new QSpinBox(widget);
         spinBox->setObjectName(QStringLiteral("spinBox"));
         spinBox->setMinimum(1);
         spinBox->setMaximum(1000000);
@@ -115,7 +140,7 @@ public:
 
         horizontalLayout_4->addWidget(spinBox);
 
-        label_2 = new QLabel(layoutWidget);
+        label_2 = new QLabel(widget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setAlignment(Qt::AlignCenter);
 
@@ -130,7 +155,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_5);
 
-        pushButton_3 = new QPushButton(layoutWidget);
+        pushButton_3 = new QPushButton(widget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         sizePolicy1.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
         pushButton_3->setSizePolicy(sizePolicy1);
@@ -150,7 +175,7 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
-        pushButton_2 = new QPushButton(layoutWidget);
+        pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         sizePolicy1.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy1);
@@ -163,6 +188,105 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_2);
+
+
+        horizontalLayout_5->addLayout(verticalLayout);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        label_9 = new QLabel(widget);
+        label_9->setObjectName(QStringLiteral("label_9"));
+        label_9->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label_9);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        comboBox = new QComboBox(widget);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+
+        verticalLayout_2->addWidget(comboBox);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer);
+
+        pushButton_4 = new QPushButton(widget);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+
+        verticalLayout_2->addWidget(pushButton_4);
+
+
+        verticalLayout_3->addLayout(verticalLayout_2);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_2);
+
+        line = new QFrame(widget);
+        line->setObjectName(QStringLiteral("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_3->addWidget(line);
+
+        label_4 = new QLabel(widget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label_4);
+
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        label_5 = new QLabel(widget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+
+        gridLayout->addWidget(label_5, 0, 0, 1, 1);
+
+        label_6 = new QLabel(widget);
+        label_6->setObjectName(QStringLiteral("label_6"));
+
+        gridLayout->addWidget(label_6, 1, 0, 1, 3);
+
+        horizontalSlider_2 = new QSlider(widget);
+        horizontalSlider_2->setObjectName(QStringLiteral("horizontalSlider_2"));
+        horizontalSlider_2->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSlider_2, 1, 3, 1, 1);
+
+        label_7 = new QLabel(widget);
+        label_7->setObjectName(QStringLiteral("label_7"));
+
+        gridLayout->addWidget(label_7, 2, 0, 1, 1);
+
+        label_8 = new QLabel(widget);
+        label_8->setObjectName(QStringLiteral("label_8"));
+
+        gridLayout->addWidget(label_8, 3, 0, 1, 2);
+
+        horizontalSlider_4 = new QSlider(widget);
+        horizontalSlider_4->setObjectName(QStringLiteral("horizontalSlider_4"));
+        horizontalSlider_4->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSlider_4, 3, 3, 1, 1);
+
+        horizontalSlider = new QSlider(widget);
+        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
+        horizontalSlider->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSlider, 2, 3, 1, 1);
+
+        horizontalSlider_3 = new QSlider(widget);
+        horizontalSlider_3->setObjectName(QStringLiteral("horizontalSlider_3"));
+        horizontalSlider_3->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSlider_3, 0, 3, 1, 1);
+
+
+        verticalLayout_3->addLayout(gridLayout);
+
+
+        horizontalLayout_5->addLayout(verticalLayout_3);
 
         ExUserScreen->setCentralWidget(centralwidget);
 
@@ -180,6 +304,13 @@ public:
         label_2->setText(QApplication::translate("ExUserScreen", "Milliseconds", 0));
         pushButton_3->setText(QApplication::translate("ExUserScreen", "Manage Goods", 0));
         pushButton_2->setText(QApplication::translate("ExUserScreen", "Exit", 0));
+        label_9->setText(QApplication::translate("ExUserScreen", "Item type:", 0));
+        pushButton_4->setText(QApplication::translate("ExUserScreen", "PushButton", 0));
+        label_4->setText(QApplication::translate("ExUserScreen", "Margins", 0));
+        label_5->setText(QApplication::translate("ExUserScreen", "Top", 0));
+        label_6->setText(QApplication::translate("ExUserScreen", "Left", 0));
+        label_7->setText(QApplication::translate("ExUserScreen", "Height", 0));
+        label_8->setText(QApplication::translate("ExUserScreen", "Width", 0));
     } // retranslateUi
 
 };

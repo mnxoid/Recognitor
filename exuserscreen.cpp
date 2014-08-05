@@ -20,6 +20,7 @@
 #include <QDebug>
 #include "packet.h"
 #include <QTimer>
+#include <QPainter>
 extern int isCapturing; //!< Determines, whether capturing session is active
 extern int session; //!< Session ID
 /**
@@ -109,7 +110,14 @@ void ExUserScreen::imShow(cv::Mat m)
     QPixmap px;
     px.convertFromImage(qm);
     QPixmap scaledPixmap = px.scaled(ui->label_3->size(), Qt::KeepAspectRatio);
+    QPainter* paint = new QPainter(&scaledPixmap);
+    paint->drawRect(ui->horizontalSlider_2->value(),ui->horizontalSlider_3->value(),ui->horizontalSlider_4->value(),ui->horizontalSlider->value());
     ui->label_3->setPixmap( scaledPixmap);
+    delete paint;
+    ui->horizontalSlider_3->setMaximum(scaledPixmap.height());
+    ui->horizontalSlider_2->setMaximum(scaledPixmap.width());
+    ui->horizontalSlider->setMaximum(scaledPixmap.height() - ui->horizontalSlider_3->value());
+    ui->horizontalSlider_4->setMaximum(scaledPixmap.width() - ui->horizontalSlider_2->value());
 }
 /**
  * @brief       Capture stopping handler
@@ -121,6 +129,7 @@ void ExUserScreen::captureStop()
         isCapturing = 0;
         ui->pushButton->setText("START");
         cc->terminate();
+        cc->wait();
         cc->End();
         delete cc;
     }
@@ -139,13 +148,15 @@ void ExUserScreen::sendPic()
     if(ui->label_3->pixmap())
     {
         char *d;
-        int size = ui->label_3->pixmap()->toImage().byteCount();
-        d = (char*)ui->label_3->pixmap()->toImage().bits();
+        QImage cut = ui->label_3->pixmap()->toImage().copy(ui->horizontalSlider_2->value(),ui->horizontalSlider_3->value(),ui->horizontalSlider_4->value(),ui->horizontalSlider->value());
+        int size = cut.byteCount();
+        d = (char*)cut.bits();
         Packet p(PIC_SEND, session, size, d);
         Packet* resp = p.send("127.0.0.1",1337);
         if (resp->getRequestID() != RESP_OK)
         {
             qDebug() << "Error sending pic";
         }
+        delete resp;
     }
 }
